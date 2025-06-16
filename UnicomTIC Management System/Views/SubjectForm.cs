@@ -34,7 +34,7 @@ namespace UnicomTIC_Management_System.Views
             var courses = await course_Controller.GetAllCourseAsync();
             cmb_course.DataSource = courses;
             cmb_course.DisplayMember = "CourseName";
-            cmb_course.ValueMember = "CourseId";
+            cmb_course.ValueMember = "CourseID";
         }
 
         private async Task LoadSubjects()

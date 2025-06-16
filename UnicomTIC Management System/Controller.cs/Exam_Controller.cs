@@ -27,9 +27,9 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             exam.Add(new Exam
                             {
-                                ExamId = reader.GetInt32(0),
+                                ExamID = reader.GetInt32(0),
                                 ExamName = reader.GetString(1),
-                                SubjectId = reader.GetInt32(2)
+                                SubjectID = reader.GetInt32(2)
                                 
                             });
                         }
@@ -43,11 +43,11 @@ namespace UnicomTIC_Management_System.Controller.cs
         { 
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "INSERT INTO Exam (ExamName, SubjectId) VALUES (@name, @sbjectId);";
+                string query = "INSERT INTO Exam (ExamName, SubjectID) VALUES (@name, @sbjectId);";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@name", exam.ExamName);
-                    cmd.Parameters.AddWithValue("@subjectId", exam.SubjectId);
+                    cmd.Parameters.AddWithValue("@subjectId", exam.SubjectID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -57,11 +57,11 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "Update Exam SET (ExamName = @name, SubjectId = @sbjectId WHERE ExamId = @id;";
+                string query = "Update Exam SET (ExamName = @name, SubjectID = @sbjectId WHERE ExamId = @id;";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@name", exam.ExamName);
-                    cmd.Parameters.AddWithValue("@subjectId", exam.SubjectId);
+                    cmd.Parameters.AddWithValue("@subjectId", exam.SubjectID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -71,7 +71,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Exam WHERE ExamId = @id;";
+                string query = "DELETE FROM Exam WHERE ExamID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {

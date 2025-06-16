@@ -28,7 +28,7 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             room.Add(new Room
                             {
-                                RoomId = reader.GetInt32(0),
+                                RoomID = reader.GetInt32(0),
                                 RoomName = reader.GetString(1),
                                 RoomType = reader.GetString(2)
                             });
@@ -64,13 +64,13 @@ namespace UnicomTIC_Management_System.Controller.cs
                 { 
                     cmd.Parameters.AddWithValue("@name", room.RoomName);
                     cmd.Parameters.AddWithValue("@type", room.RoomType);
-                    cmd.Parameters.AddWithValue("@id", room.RoomId);
+                    cmd.Parameters.AddWithValue("@id", room.RoomID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int roomid)
         {
             using (var conn = DBConfig.GetConnection())
             {
@@ -78,7 +78,7 @@ namespace UnicomTIC_Management_System.Controller.cs
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", roomid);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }

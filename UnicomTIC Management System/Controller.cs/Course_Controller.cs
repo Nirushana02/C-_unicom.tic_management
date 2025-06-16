@@ -30,7 +30,7 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             course.Add(new Course
                             {
-                                Id = reader.GetInt32(0),
+                                CourseID = reader.GetInt32(0),
                                 CourseName = reader.GetString(1),
                                 StartDate = reader.GetDateTime(2),
                                 EndDate = reader.GetDateTime(3)
@@ -62,28 +62,28 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "UPDATE Course SET CourseName = @name, StartDate = @startDate, EndDate = @endDate WHERE Id = @id;";
+                string query = "UPDATE Course SET CourseName = @name, StartDate = @startDate, EndDate = @endDate WHERE CourseID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@name", course.CourseName);
                     cmd.Parameters.AddWithValue("@startDate", course.StartDate);
                     cmd.Parameters.AddWithValue("@endDate", course.EndDate);
-                    cmd.Parameters.AddWithValue("@id", course.Id);
+                    cmd.Parameters.AddWithValue("@id", course.CourseID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        public async void DeleteAsync(int id)
+        public async void DeleteAsync(int courseid)
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Course WHERE Id = @id;";
+                string query = "DELETE FROM Course WHERE CourseID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query,conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", courseid);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }

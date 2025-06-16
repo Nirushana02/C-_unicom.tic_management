@@ -31,9 +31,9 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             student.Add(new Student
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                Name = reader["Name"].ToString(),
-                                CourseId = Convert.ToInt32(reader["CourseId"]),
+                                StudentID = Convert.ToInt32(reader["Id"]),
+                                StudentName = reader["Name"].ToString(),
+                                CourseID = Convert.ToInt32(reader["CourseId"]),
                             });
                         }
                     }
@@ -49,12 +49,12 @@ namespace UnicomTIC_Management_System.Controller.cs
             {
                 await conn.OpenAsync();
 
-                string query = "INSERT INTO Student (Name, CourseId) VALUES (@name, @courseId);";
+                string query = "INSERT INTO Student (StudentName, CourseID) VALUES (@name, @courseId);";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(@query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@name", student.Name);
-                    cmd.Parameters.AddWithValue("@courseId", student.CourseId);
+                    cmd.Parameters.AddWithValue("@name", student.StudentName);
+                    cmd.Parameters.AddWithValue("@courseId", student.CourseID);
                     await cmd.ExecuteNonQueryAsync();
                 }
 
@@ -66,30 +66,30 @@ namespace UnicomTIC_Management_System.Controller.cs
             {
                 await conn.OpenAsync();
 
-                string query = "UPDATE Student SET Name = @name,CourseId = @courseId WHERE Id = @id;";
+                string query = "UPDATE Student SET StudentName = @name,CourseID = @courseId WHERE Id = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(@query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@name", student.Name);
-                    cmd.Parameters.AddWithValue("@courseId", student.CourseId);
-                    cmd.Parameters.AddWithValue("@id", student.Id);
+                    cmd.Parameters.AddWithValue("@name", student.StudentName);
+                    cmd.Parameters.AddWithValue("@courseId", student.CourseID);
+                    cmd.Parameters.AddWithValue("@id", student.StudentID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int studentid)
         {
             using (var conn = DBConfig.GetConnection())
             {
                 await conn.OpenAsync();
 
-                string query = "DELETE FROM Student WHERE Id = @Id";
+                string query = "DELETE FROM Student WHERE StudentId = @Id";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(@query, conn))
                 {
 
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@Id", studentid);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }

@@ -56,7 +56,7 @@ namespace UnicomTIC_Management_System.Views
                 {
                     await lecture_Controller.UpdateAsync(new Lecture
                     {
-                        LectureId = Clicked_LectureId,
+                        LectureID = Clicked_LectureId,
                         LectureName = txt_lec_name.Text.Trim(),
                         Address = txt_lec_add.Text
                     });
@@ -126,7 +126,7 @@ namespace UnicomTIC_Management_System.Views
             if (e.RowIndex >= 0)
             {
                 var row = dgv_lecture.Rows[e.RowIndex];
-                Clicked_LectureId = Convert.ToInt32(row.Cells["LectureId"].Value);
+                Clicked_LectureId = Convert.ToInt32(row.Cells["LectureID"].Value);
                 txt_lec_name.Text = row.Cells["LectureName"].Value.ToString();
                 txt_lec_add.Text = row.Cells["Address"].Value.ToString();
             }

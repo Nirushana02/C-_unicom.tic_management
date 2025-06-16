@@ -64,7 +64,7 @@ namespace UnicomTIC_Management_System.Views
             {
                  course_Controller.UpdateAsync(new Course
                 {
-                    Id = Clicked_Id,
+                    CourseID = Clicked_Id,
                     CourseName = txt_cname.Text.Trim()
                 });
                 txt_cname.Clear();

@@ -22,6 +22,7 @@ namespace UnicomTIC_Management_System.Views
         {
             InitializeComponent();
             this.Load += MarkForm_Load;
+            this.dgv_marks.CellContentClick += dgv_marks_CellContentClick;
         }
 
         private async void MarkForm_Load(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace UnicomTIC_Management_System.Views
             var student = await student_Controller.GetStudentsAsync();
             cmd_student.DataSource = student;
             cmd_student.DisplayMember = "StudentName";
-            cmd_student.ValueMember = "StudentId";
+            cmd_student.ValueMember = "StudentID";
         }
 
         private async Task LoadExams()
@@ -44,7 +45,7 @@ namespace UnicomTIC_Management_System.Views
             var exam = await exam_Controller.GetAllExamAsync();
             cmd_exam.DataSource = exam;
             cmd_exam.DisplayMember = "ExamName";
-            cmd_exam.ValueMember = "ExamId";
+            cmd_exam.ValueMember = "ExamID";
         }
 
         private async Task LoadMarks()

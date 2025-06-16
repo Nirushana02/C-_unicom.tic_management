@@ -29,7 +29,7 @@ namespace UnicomTIC_Management_System.Controller.cs
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Role", user.Role);
-                    cmd.Parameters.AddWithValue("@Name", user.Name);
+                    cmd.Parameters.AddWithValue("@Name", user.UserName);
                     cmd.Parameters.AddWithValue("@Password", user.Password);
                     cmd.ExecuteNonQuery();
                 }

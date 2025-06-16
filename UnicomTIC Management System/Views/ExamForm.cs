@@ -51,7 +51,7 @@ namespace UnicomTIC_Management_System.Views
                 await exam_Controller.AddAsync(new Exam
                 {
                     ExamName = examName,
-                    SubjectId = subjectId
+                    SubjectID = subjectId
                 });
                 txt_exam.Clear();
                 await LoadExams();
@@ -73,9 +73,9 @@ namespace UnicomTIC_Management_System.Views
             {
                 await exam_Controller.UpdateAsync(new Exam
                 {
-                    ExamId = Clicked_ExamId,
+                    ExamID = Clicked_ExamId,
                     ExamName = txt_exam.Text.Trim(),
-                    SubjectId = Convert.ToInt32(cmb_sub.SelectedValue)
+                    SubjectID = Convert.ToInt32(cmb_sub.SelectedValue)
                 });
 
                 txt_exam.Clear();

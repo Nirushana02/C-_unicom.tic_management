@@ -30,8 +30,8 @@ namespace UnicomTIC_Management_System.Views
         {
             var timetable = new Timetable
             {
-                SubjectId = Convert.ToInt32(combo_sbu.SelectedValue),
-                RoomId = Convert.ToInt32(combo_room.SelectedValue),
+                SubjectID = Convert.ToInt32(combo_sbu.SelectedValue),
+                RoomID = Convert.ToInt32(combo_room.SelectedValue),
                 TimeSlot = txt_time.Text.Trim()
             };
 
@@ -46,10 +46,11 @@ namespace UnicomTIC_Management_System.Views
             {
                 await timetable_Controller.UpdateAsync(new Timetable
                 {
-                    Id = Clicked_Timetable_Id,
-                    SubjectId = Convert.ToInt32(combo_sbu.SelectedValue),
-                    RoomId = Convert.ToInt32(combo_room.SelectedValue),
-                    TimeSlot = txt_time.Text.Trim()
+                    TimetableID = Clicked_Timetable_Id,
+                    SubjectID = Convert.ToInt32(combo_sbu.SelectedValue),
+                    TimeSlot = txt_time.Text.Trim(),
+                    RoomID = Convert.ToInt32(combo_room.SelectedValue)
+                   
                 });
 
                 txt_time.Clear();
@@ -99,7 +100,7 @@ namespace UnicomTIC_Management_System.Views
             var subjects = await subject_Controller.GetAllSubjectsAsync();
             combo_sbu.DataSource = subjects;
             combo_sbu.DisplayMember = "SubjectName";
-            combo_sbu.ValueMember = "SubjectId";
+            combo_sbu.ValueMember = "SubjectID";
         }
 
         private async Task LoadRooms()
@@ -107,7 +108,7 @@ namespace UnicomTIC_Management_System.Views
             var rooms = await room_Controller.GetAllAsync();
             combo_room.DataSource = rooms;
             combo_room.DisplayMember = "RoomName";
-            combo_room.ValueMember = "RoomId";
+            combo_room.ValueMember = "RoomID";
         }
     }
 }

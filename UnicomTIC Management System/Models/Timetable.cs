@@ -8,10 +8,10 @@ namespace UnicomTIC_Management_System.Models
 {
     internal class Timetable
     {
-        public int Id { get; set; }
-        public int SubjectId { get; set; }
+        public int TimetableID { get; set; }
+        public int SubjectID { get; set; }
         public string TimeSlot { get; set; }
-        public int RoomId { get; set; }
+        public int RoomID { get; set; }
        
         
 

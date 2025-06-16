@@ -76,7 +76,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Subject WHERE SubjectId = @id;";
+                string query = "DELETE FROM Subject WHERE SubjectID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {

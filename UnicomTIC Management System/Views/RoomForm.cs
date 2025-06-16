@@ -45,7 +45,7 @@ namespace UnicomTIC_Management_System.Views
             {
                 await room_Controller.UpdateAsync(new Room
                 {
-                    RoomId = Clicked_RoomId,
+                    RoomID = Clicked_RoomId,
                     RoomName = txt_rname.Text.Trim(),
                     RoomType = cmb_type.SelectedItem?.ToString()
                 });

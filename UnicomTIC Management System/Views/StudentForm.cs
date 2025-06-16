@@ -38,8 +38,8 @@ namespace UnicomTIC_Management_System
                 {
                 await student_Controller.AddAsync(new Student
                 {
-                    Name = name,
-                    CourseId = courseId
+                    StudentName = name,
+                    CourseID = courseId
                 });
                 txtBox_name.Clear();
                 await LoadStudents();
@@ -60,9 +60,9 @@ namespace UnicomTIC_Management_System
             {
                 await student_Controller.UpdateAsync(new Student
                 {
-                    Id = Clicked_Stu_Id,
-                    Name = txtBox_name.Text,                  
-                    CourseId = Convert.ToInt32(cmb_course.SelectedValue)
+                    StudentID = Clicked_Stu_Id,
+                    StudentName = txtBox_name.Text,                  
+                    CourseID = Convert.ToInt32(cmb_course.SelectedValue)
                     
                 });
                 txtBox_name.Clear() ;                
@@ -112,7 +112,7 @@ namespace UnicomTIC_Management_System
             var course = await course_Controller.GetAllCourseAsync();
             cmb_course.DataSource = course;
             cmb_course.DisplayMember = "CourseName";
-            cmb_course.ValueMember = "CourseId";
+            cmb_course.ValueMember = "CourseID";
         }
     }
 }

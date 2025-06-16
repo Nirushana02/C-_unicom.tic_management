@@ -40,46 +40,12 @@ namespace UnicomTIC_Management_System.Controller.cs
             return mark;
         }
 
-        /*public async Task<DataTable> GetAllMarksByStudentAsync(string username)
-        {
-            DataTable marksTable = new DataTable();
-
-            using (var conn = DBConfig.GetConnection())
-            {
-                await conn.OpenAsync();
-                string query = @"
-                    SELECT 
-                        Mark.MarkID AS 'Mark ID',
-                        Mark.StudentID AS 'Student ID',
-                        Mark.ExamID AS 'Exam ID',
-                        Mark.Score AS 'Score'
-                    FROM 
-                        Mark
-                    INNER JOIN 
-                        Students ON Mark.StudentID = Students.Id
-                    WHERE 
-                        Students.Username = @username;";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@username", username);
-
-                    using (var adapter = new SQLiteDataAdapter(cmd))
-                    {
-                        adapter.Fill(marksTable);
-                    }
-                }
-            }
-
-            return marksTable;
-        }*/
-
         public async Task AddAsync(Mark mark)
 
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "INSERT INTO Mark (StudentID, ExamID, Score) VALUES (@sid, @eid, @score);";
+                string query = "INSERT INTO Marks (StudentID, ExamID, Score) VALUES (@sid, @eid, @score);";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -96,7 +62,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "UPDATE Mark SET StudentID = @sid, ExamID = @eid, Score = @score WHERE Id = @id;";
+                string query = "UPDATE Marks SET StudentID = @sid, ExamID = @eid, Score = @score WHERE MarkId = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -113,7 +79,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Mark WHERE MarkId = @id;";
+                string query = "DELETE FROM Marks WHERE MarkID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {

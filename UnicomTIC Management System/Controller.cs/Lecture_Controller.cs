@@ -28,7 +28,7 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             lectures.Add(new Lecture
                             {
-                                LectureId = reader.GetInt32(0),
+                                LectureID = reader.GetInt32(0),
                                 LectureName = reader.GetString(1),
                                 Address = reader.GetString(2)
                             });
@@ -66,21 +66,21 @@ namespace UnicomTIC_Management_System.Controller.cs
                 {
                     cmd.Parameters.AddWithValue("@LectureName", lecture.LectureName);
                     cmd.Parameters.AddWithValue("@Address", lecture.Address);
-                    cmd.Parameters.AddWithValue("@LectureId", lecture.LectureId);
+                    cmd.Parameters.AddWithValue("@LectureId", lecture.LectureID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int lectureid)
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Lecture WHERE LectureId = @id;";
+                string query = "DELETE FROM Lecture WHERE LectureID = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", lectureid);
                     await cmd.ExecuteNonQueryAsync();
 
                 }

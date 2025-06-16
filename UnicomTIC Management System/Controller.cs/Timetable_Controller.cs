@@ -28,10 +28,10 @@ namespace UnicomTIC_Management_System.Controller.cs
                         {
                             timetable.Add(new Timetable
                             {
-                                Id = reader.GetInt32(0),
-                                SubjectId = reader.GetInt32(1),
+                                TimetableID = reader.GetInt32(0),
+                                SubjectID = reader.GetInt32(1),
                                 TimeSlot = reader.GetString(2),
-                                RoomId = reader.GetInt32(3)
+                                RoomID = reader.GetInt32(3)
                             });
                         }
 
@@ -46,13 +46,13 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn =  DBConfig.GetConnection())
             {
-                string query = "INSERT INTO Timetable (SubjectId, TimeSlot, RoomId) VALUES (@sub, @slot, @room);";
+                string query = "INSERT INTO Timetable (SubjectID, TimeSlot, RoomID) VALUES (@sub, @slot, @room);";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@sub", timetable.SubjectId);
+                    cmd.Parameters.AddWithValue("@sub", timetable.SubjectID);
                     cmd.Parameters.AddWithValue("@slot", timetable.TimeSlot);
-                    cmd.Parameters.AddWithValue("@room", timetable.RoomId);
+                    cmd.Parameters.AddWithValue("@room", timetable.RoomID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -62,14 +62,14 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn =  DBConfig.GetConnection())
             {
-                string query = "UPDATE Timetable SET SubjectId = @sub, TimeSlot = @slot, RoomId = @room WHERE Id = @id;";
+                string query = "UPDATE Timetable SET SubjectID = @sub, TimeSlot = @slot, RoomID = @room WHERE Id = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@sub", timetable.SubjectId);
+                    cmd.Parameters.AddWithValue("@sub", timetable.SubjectID);
                     cmd.Parameters.AddWithValue("@slot", timetable.TimeSlot);
-                    cmd.Parameters.AddWithValue("@room", timetable.RoomId);
-                    cmd.Parameters.AddWithValue("@id", timetable.Id);
+                    cmd.Parameters.AddWithValue("@room", timetable.RoomID);
+                    cmd.Parameters.AddWithValue("@id", timetable.TimetableID);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -79,11 +79,11 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn =  DBConfig.GetConnection())
             {
-                string query = "DELETE FROM Timetable WHERE Id = @id;";
+                string query = "DELETE FROM Timetable WHERE TimetableId = @id;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@id", id);
                     
                     await cmd.ExecuteNonQueryAsync();
                 }

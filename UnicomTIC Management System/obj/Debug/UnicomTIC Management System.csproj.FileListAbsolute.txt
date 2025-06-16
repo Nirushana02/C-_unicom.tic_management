@@ -1,0 +1,67 @@
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.exe.config
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.exe
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.pdb
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\System.Data.SQLite.dll
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\System.Data.SQLite.xml
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Properties.Resources.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTI.6569F41D.Up2Date
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.pdb
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe.config
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LoginForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.MainForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.StudentForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LectureForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.TimetableForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.CourseForm.resources
+C:\Users\hp\Desktop\C# Project\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.ExamForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.exe.config
+E:\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.exe
+E:\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\UnicomTIC Management System.pdb
+E:\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\System.Data.SQLite.dll
+E:\UnicomTIC Management System\UnicomTIC Management System\bin\Debug\System.Data.SQLite.xml
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.AssemblyReference.cache
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe.config
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.ExamForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LectureForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LoginForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.CourseForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.StudentForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Properties.Resources.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.TimetableForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.GenerateResource.cache
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.CoreCompileInputs.cache
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTI.6569F41D.Up2Date
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.pdb
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.DashboardForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.MarkForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.RoomForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.AssemblyReference.cache
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.DashboardForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.ExamForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LectureForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LoginForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.MainForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.CourseForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.MarkForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.RoomForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.StudentForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Properties.Resources.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.SubjectForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.TimetableForm.resources
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.GenerateResource.cache
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.CoreCompileInputs.cache
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe
+Z:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.pdb
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.SubjectForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.AdminDashBoardForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureDashBoardForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StaffDashBoardForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentDashBoardForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentMarksForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureCourseForm.resources
+E:\UnicomTIC Management System\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentTimetableForm.resources

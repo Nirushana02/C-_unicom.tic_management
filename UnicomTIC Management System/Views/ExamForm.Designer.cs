@@ -78,6 +78,10 @@
             // cmb_sub
             // 
             this.cmb_sub.FormattingEnabled = true;
+            this.cmb_sub.Items.AddRange(new object[] {
+            "Programming",
+            "UI Design",
+            "Code Developer"});
             this.cmb_sub.Location = new System.Drawing.Point(304, 82);
             this.cmb_sub.Name = "cmb_sub";
             this.cmb_sub.Size = new System.Drawing.Size(182, 21);

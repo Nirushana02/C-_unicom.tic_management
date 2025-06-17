@@ -101,6 +101,7 @@ namespace UnicomTIC_Management_System
         {
             await LoadStudents();
             await LoadCourses();
+            await LoadStudentCourseData();
         }
 
         private async Task LoadStudents()
@@ -114,6 +115,12 @@ namespace UnicomTIC_Management_System
             cmb_course.DataSource = course;
             cmb_course.DisplayMember = "CourseName";
             cmb_course.ValueMember = "CourseID";
+        }
+
+        private async Task LoadStudentCourseData()
+        {
+            var dt = await course_Controller.GetStudentCourseDetailsAsync();
+            dgv_stu.DataSource = dt;
         }
     }
 }

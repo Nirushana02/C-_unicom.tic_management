@@ -83,5 +83,10 @@ namespace UnicomTIC_Management_System.Views
         {
             Application.Exit();
         }
+
+        private void btn_manag_sub_Click(object sender, EventArgs e)
+        {
+            LoadForm(new SubjectForm());
+        }
     }
 }

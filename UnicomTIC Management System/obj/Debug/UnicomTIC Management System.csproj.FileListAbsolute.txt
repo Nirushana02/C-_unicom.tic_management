@@ -124,3 +124,27 @@ E:\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTI.6569F
 E:\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe
 E:\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.pdb
 E:\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentMarkForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe.config
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.DashboardForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureCourseForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureDashBoardForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.ReadOnlyTimetableForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StaffDashBoardForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentDashBoardForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StudentMarkForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.ExamForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LectureForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.LoginForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.AdminDashBoardForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.CourseForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.MarkForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.RoomForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.StudentForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Properties.Resources.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.SubjectForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.TimetableForm.resources
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe
+C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.pdb

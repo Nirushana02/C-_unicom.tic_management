@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Security.Cryptography;
@@ -41,6 +42,41 @@ namespace UnicomTIC_Management_System.Controller.cs
             }
             return course;
        }
+
+        public async Task<DataTable> GetStudentCourseDetailsAsync()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = @"
+                            SELECT 
+                                Student.StudentID,
+                                Student.StudentName,
+                                Course.CourseName,
+                                Course.StartDate,
+                                Course.EndDate
+                            FROM 
+                                Student
+                            JOIN 
+                                Course
+                            ON 
+                                Student.CourseID = Course.CourseID;";
+
+            using (var conn = DBConfig.GetConnection())
+            {
+                await conn.OpenAsync();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+
+            return dataTable;
+        }
+
+
 
         public async void AddAsync(Course course)
         {

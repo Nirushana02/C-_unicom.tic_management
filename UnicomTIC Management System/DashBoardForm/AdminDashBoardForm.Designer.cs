@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.btn_manag_sub = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.btn_manag_sub);
             this.panel1.Controls.Add(this.btn_mang_stu);
             this.panel1.Controls.Add(this.btn_manag_room);
             this.panel1.Controls.Add(this.btn_manag_mark);
@@ -159,6 +161,16 @@
             this.mainPanel.Size = new System.Drawing.Size(717, 457);
             this.mainPanel.TabIndex = 9;
             // 
+            // btn_manag_sub
+            // 
+            this.btn_manag_sub.Location = new System.Drawing.Point(12, 374);
+            this.btn_manag_sub.Name = "btn_manag_sub";
+            this.btn_manag_sub.Size = new System.Drawing.Size(132, 23);
+            this.btn_manag_sub.TabIndex = 6;
+            this.btn_manag_sub.Text = "Manage Subject";
+            this.btn_manag_sub.UseVisualStyleBackColor = true;
+            this.btn_manag_sub.Click += new System.EventHandler(this.btn_manag_sub_Click);
+            // 
             // AdminDashBoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +201,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_manag_sub;
     }
 }

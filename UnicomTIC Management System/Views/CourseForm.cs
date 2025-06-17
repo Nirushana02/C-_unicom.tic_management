@@ -33,6 +33,7 @@ namespace UnicomTIC_Management_System.Views
             dgv_course.DataSource = await course_Controller.GetAllCourseAsync();
         }
 
+
         private async void btn_c_add_Click(object sender, EventArgs e)
         {
             string name = txt_cname.Text;

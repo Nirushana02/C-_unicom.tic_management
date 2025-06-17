@@ -18,7 +18,7 @@ namespace UnicomTIC_Management_System.DashBoardForm
         public StudentDashBoardForm()
         {
             InitializeComponent();
-            LoadForm(new DashboardForm());
+            LoadForm(new WelcomDashboard());
            // studentId = id;
         }
 

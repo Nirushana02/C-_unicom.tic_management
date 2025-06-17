@@ -17,14 +17,31 @@ namespace UnicomTIC_Management_System.Controller.cs
     {
         public Login_Controller() { }
 
-        public Login_Controller(User user)
+        public async Task AddDefaultUsersAsync()
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "INSERT INTO User (role, name, password) VALUES ('Admin','admin','admin123')" +
-                                                                                "('Student', 'student', 'student123')" +
-                                                                                "('Lecture', 'lecture', 'lecture123')" +
-                                                                                "('Staff', 'staff', 'staff123');";
+                await conn.OpenAsync();
+                string query = @"
+                    INSERT INTO User (role, name, password) VALUES 
+                    ('Admin', 'admin', 'admin123'),
+                    ('Student', 'student', 'student123'),
+                    ('Lecture', 'lecture', 'lecture123'),
+                    ('Staff', 'staff', 'staff123');";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    await cmd.ExecuteNonQueryAsync();
+                }
+            }
+        }
+
+        public void AddUser(User user)
+        {
+            using (var conn = DBConfig.GetConnection())
+            {
+                conn.Open();
+                string query = "INSERT INTO User (role, name, password) VALUES (@Role, @Name, @Password);";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -33,9 +50,9 @@ namespace UnicomTIC_Management_System.Controller.cs
                     cmd.Parameters.AddWithValue("@Password", user.Password);
                     cmd.ExecuteNonQuery();
                 }
-
             }
         }
     }
 }
+
 

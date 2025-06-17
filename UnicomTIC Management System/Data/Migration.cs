@@ -53,15 +53,15 @@ namespace UnicomTIC_Management_System.Data
                                 CREATE TABLE IF NOT EXISTS Subject (SubjectID INTEGER PRIMARY KEY,
                                                                         SubjectName TEXT,
                                                                         CourseID INTEGER,
-                                                                        FOREIGN KEY(CourseID) REFERENCES Courses(CourseID));
+                                                                        FOREIGN KEY(CourseID) REFERENCES Course(CourseID));
 
                                  CREATE TABLE IF NOT EXISTS Student (StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
                                                                     StudentName TEXT,
                                                                     CourseID INTEGER,
-                                                                    FOREIGN KEY(CourseID) REFERENCES Courses(CourseID));
+                                                                    FOREIGN KEY(CourseID) REFERENCES Course(CourseID));
 
                                   CREATE TABLE IF NOT EXISTS Staff (StaffID INTEGER PRIMARY KEY AUTOINCREMENT,
-                                                                    StaffName TEXT,PhoneNumber INTEGER,
+                                                                    StaffName TEXT,PhoneNumber TEXT,
                                                                     Gender TEXT, Status TEXT)
                 
 

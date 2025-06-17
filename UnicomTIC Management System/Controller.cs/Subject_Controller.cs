@@ -44,7 +44,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "INSERT INTO Subjects (SubjectName, CourseID) VALUES (@name, @courseId)";
+                string query = "INSERT INTO Subject (SubjectName, CourseID) VALUES (@name, @courseId)";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -60,7 +60,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "UPDATE Subjects SET SubjectName = @name, CourseID = @courseId WHERE SubjectID = @id";
+                string query = "UPDATE Subject SET SubjectName = @name, CourseID = @courseId WHERE SubjectID = @id";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {

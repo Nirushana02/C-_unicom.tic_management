@@ -30,7 +30,7 @@ namespace UnicomTIC_Management_System.Controller.cs
                             {
                                 StaffID = reader.GetInt32(0),
                                 StaffName = reader.GetString(1),
-                                PhoneNumber = reader.GetInt64(2).ToString(),
+                                PhoneNumber = reader.GetString(2),
                                 Gender = reader.GetString(3),
                                 Status = reader.GetString(4)
                             });

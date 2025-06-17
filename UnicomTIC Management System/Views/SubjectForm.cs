@@ -39,7 +39,7 @@ namespace UnicomTIC_Management_System.Views
 
         private async Task LoadSubjects()
         {
-            dgv_sub.DataSource = await course_Controller.GetAllCourseAsync();
+            dgv_sub.DataSource = await subject_Controller.GetAllSubjectsAsync();
         }
 
         private async void btn_add_Click(object sender, EventArgs e)

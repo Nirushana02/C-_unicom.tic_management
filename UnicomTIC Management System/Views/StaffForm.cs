@@ -36,7 +36,7 @@ namespace UnicomTIC_Management_System.Views
         private async void btn_add_Click(object sender, EventArgs e)
         {
             string name = txt_name.Text;
-            int number = Convert.ToInt32(txt_number.Text);
+            string number = txt_number.Text;
             string gender = cmb_gender.SelectedItem?.ToString();
             string status = cmb_status.SelectedItem?.ToString();
 
@@ -92,7 +92,7 @@ namespace UnicomTIC_Management_System.Views
                     {
                         StaffID = Clicked_ID,
                         StaffName = txt_name.Text.Trim(),
-                        PhoneNumber = phoneNumber,
+                        PhoneNumber = txt_number.Text.Trim(),
                         Gender = cmb_gender.SelectedItem.ToString(),
                         Status = cmb_status.SelectedItem.ToString()
                     });

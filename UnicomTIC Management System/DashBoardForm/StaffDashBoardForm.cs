@@ -16,7 +16,7 @@ namespace UnicomTIC_Management_System.DashBoardForm
         public StaffDashBoardForm()
         {
             InitializeComponent();
-            LoadForm(new DashboardForm());
+            LoadForm(new WelcomDashboard());
         }
 
         public void LoadForm(object formObj)

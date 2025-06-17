@@ -1,6 +1,6 @@
 ﻿namespace UnicomTIC_Management_System.DashBoardForm
 {
-    partial class LectureCourseForm
+    partial class WelcomDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,27 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_cou_table = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cou_table)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 46);
+            this.label1.Font = new System.Drawing.Font("MV Boli", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(90, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 19);
+            this.label1.Size = new System.Drawing.Size(458, 85);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Course Table";
+            this.label1.Text = "Welcome User";
             // 
-            // dgv_cou_table
-            // 
-            this.dgv_cou_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cou_table.Location = new System.Drawing.Point(84, 110);
-            this.dgv_cou_table.Name = "dgv_cou_table";
-            this.dgv_cou_table.Size = new System.Drawing.Size(439, 235);
-            this.dgv_cou_table.TabIndex = 1;
-            // 
-            // LectureCourseForm
+            // WelcomDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 379);
-            this.Controls.Add(this.dgv_cou_table);
+            this.ClientSize = new System.Drawing.Size(670, 408);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LectureCourseForm";
-            this.Text = "LectureCourseForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cou_table)).EndInit();
+            this.Name = "WelcomDashboard";
+            this.Text = "WelcomDashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +58,5 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_cou_table;
     }
 }

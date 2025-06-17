@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace UnicomTIC_Management_System.DashBoardForm
 {
-    public partial class LectureCourseForm : Form
+    public partial class WelcomDashboard : Form
     {
-        //private readonly string lectureCourse
-        public LectureCourseForm()
+        public WelcomDashboard()
         {
             InitializeComponent();
         }

@@ -17,7 +17,7 @@ namespace UnicomTIC_Management_System.DashBoardForm
         public LectureDashBoardForm()
         {
             InitializeComponent();
-            LoadForm(new DashboardForm());
+            LoadForm(new WelcomDashboard());
         }
 
         public void LoadForm(object formObj)
@@ -48,7 +48,10 @@ namespace UnicomTIC_Management_System.DashBoardForm
             LoadForm(new TimetableForm()); 
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
+       // private void btn_close_Click(object sender, EventArgs e)
+       
+
+        private void btn_logout_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

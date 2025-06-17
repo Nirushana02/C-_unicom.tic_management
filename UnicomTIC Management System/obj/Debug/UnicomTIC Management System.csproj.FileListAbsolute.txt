@@ -151,7 +151,6 @@ C:\Users\hp\Desktop\New folder\C-_unicom.tic_management\C-_unicom.tic_management
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.csproj.AssemblyReference.cache
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC Management System.exe.config
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.Views.DashboardForm.resources
-C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureCourseForm.resources
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.LectureDashBoardForm.resources
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.ReadOnlyTimetableForm.resources
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.StaffDashBoardForm.resources
@@ -179,3 +178,4 @@ C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\bin
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\bin\Debug\System.Data.SQLite.dll
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\bin\Debug\System.Data.SQLite.xml
 C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTI.6569F41D.Up2Date
+C:\Users\hp\Desktop\pro\C-_unicom.tic_management\UnicomTIC Management System\obj\Debug\UnicomTIC_Management_System.DashBoardForm.WelcomDashboard.resources

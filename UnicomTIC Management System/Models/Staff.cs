@@ -10,7 +10,7 @@ namespace UnicomTIC_Management_System.Models
     {
         public int StaffID { get; set; }
         public string StaffName { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Gender { get; set; }
         public string Status { get; set; }
     }

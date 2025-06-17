@@ -36,17 +36,18 @@
             this.btn_manag_room = new System.Windows.Forms.Button();
             this.btn_manag_mark = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_manag_sub = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btn_manag_sub = new System.Windows.Forms.Button();
+            this.btn_manag_staff = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_mang_stu
             // 
-            this.btn_mang_stu.Location = new System.Drawing.Point(12, 77);
+            this.btn_mang_stu.Location = new System.Drawing.Point(12, 54);
             this.btn_mang_stu.Name = "btn_mang_stu";
             this.btn_mang_stu.Size = new System.Drawing.Size(132, 23);
             this.btn_mang_stu.TabIndex = 0;
@@ -56,7 +57,7 @@
             // 
             // btn_mang_lec
             // 
-            this.btn_mang_lec.Location = new System.Drawing.Point(12, 118);
+            this.btn_mang_lec.Location = new System.Drawing.Point(12, 131);
             this.btn_mang_lec.Name = "btn_mang_lec";
             this.btn_mang_lec.Size = new System.Drawing.Size(132, 23);
             this.btn_mang_lec.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             // btn_mang_cou
             // 
-            this.btn_mang_cou.Location = new System.Drawing.Point(12, 159);
+            this.btn_mang_cou.Location = new System.Drawing.Point(12, 170);
             this.btn_mang_cou.Name = "btn_mang_cou";
             this.btn_mang_cou.Size = new System.Drawing.Size(132, 23);
             this.btn_mang_cou.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             // btn_mang_timetable
             // 
-            this.btn_mang_timetable.Location = new System.Drawing.Point(12, 201);
+            this.btn_mang_timetable.Location = new System.Drawing.Point(12, 209);
             this.btn_mang_timetable.Name = "btn_mang_timetable";
             this.btn_mang_timetable.Size = new System.Drawing.Size(132, 23);
             this.btn_mang_timetable.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             // btn_manag_exam
             // 
-            this.btn_manag_exam.Location = new System.Drawing.Point(12, 242);
+            this.btn_manag_exam.Location = new System.Drawing.Point(12, 249);
             this.btn_manag_exam.Name = "btn_manag_exam";
             this.btn_manag_exam.Size = new System.Drawing.Size(132, 23);
             this.btn_manag_exam.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             // btn_manag_room
             // 
-            this.btn_manag_room.Location = new System.Drawing.Point(12, 329);
+            this.btn_manag_room.Location = new System.Drawing.Point(12, 328);
             this.btn_manag_room.Name = "btn_manag_room";
             this.btn_manag_room.Size = new System.Drawing.Size(132, 23);
             this.btn_manag_room.TabIndex = 5;
@@ -106,7 +107,7 @@
             // 
             // btn_manag_mark
             // 
-            this.btn_manag_mark.Location = new System.Drawing.Point(12, 287);
+            this.btn_manag_mark.Location = new System.Drawing.Point(12, 289);
             this.btn_manag_mark.Name = "btn_manag_mark";
             this.btn_manag_mark.Size = new System.Drawing.Size(132, 23);
             this.btn_manag_mark.TabIndex = 6;
@@ -116,7 +117,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.btn_manag_staff);
             this.panel1.Controls.Add(this.btn_manag_sub);
             this.panel1.Controls.Add(this.btn_mang_stu);
             this.panel1.Controls.Add(this.btn_manag_room);
@@ -126,14 +128,25 @@
             this.panel1.Controls.Add(this.btn_manag_exam);
             this.panel1.Controls.Add(this.btn_mang_timetable);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 482);
             this.panel1.TabIndex = 7;
             // 
+            // btn_manag_sub
+            // 
+            this.btn_manag_sub.Location = new System.Drawing.Point(12, 372);
+            this.btn_manag_sub.Name = "btn_manag_sub";
+            this.btn_manag_sub.Size = new System.Drawing.Size(132, 23);
+            this.btn_manag_sub.TabIndex = 6;
+            this.btn_manag_sub.Text = "Manage Subject";
+            this.btn_manag_sub.UseVisualStyleBackColor = true;
+            this.btn_manag_sub.Click += new System.EventHandler(this.btn_manag_sub_Click);
+            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.btn_close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(159, 0);
@@ -161,15 +174,15 @@
             this.mainPanel.Size = new System.Drawing.Size(717, 457);
             this.mainPanel.TabIndex = 9;
             // 
-            // btn_manag_sub
+            // btn_manag_staff
             // 
-            this.btn_manag_sub.Location = new System.Drawing.Point(12, 374);
-            this.btn_manag_sub.Name = "btn_manag_sub";
-            this.btn_manag_sub.Size = new System.Drawing.Size(132, 23);
-            this.btn_manag_sub.TabIndex = 6;
-            this.btn_manag_sub.Text = "Manage Subject";
-            this.btn_manag_sub.UseVisualStyleBackColor = true;
-            this.btn_manag_sub.Click += new System.EventHandler(this.btn_manag_sub_Click);
+            this.btn_manag_staff.Location = new System.Drawing.Point(12, 93);
+            this.btn_manag_staff.Name = "btn_manag_staff";
+            this.btn_manag_staff.Size = new System.Drawing.Size(132, 23);
+            this.btn_manag_staff.TabIndex = 7;
+            this.btn_manag_staff.Text = "Manage Staff";
+            this.btn_manag_staff.UseVisualStyleBackColor = true;
+            this.btn_manag_staff.Click += new System.EventHandler(this.btn_manag_staff_Click);
             // 
             // AdminDashBoardForm
             // 
@@ -202,5 +215,6 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button btn_manag_sub;
+        private System.Windows.Forms.Button btn_manag_staff;
     }
 }

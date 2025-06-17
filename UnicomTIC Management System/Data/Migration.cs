@@ -60,7 +60,9 @@ namespace UnicomTIC_Management_System.Data
                                                                     CourseID INTEGER,
                                                                     FOREIGN KEY(CourseID) REFERENCES Courses(CourseID));
 
-                                                                     
+                                  CREATE TABLE IF NOT EXISTS Staff (StaffID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                                    StaffName TEXT,PhoneNumber INTEGER,
+                                                                    Gender TEXT, Status TEXT)
                 
 
                                                                 

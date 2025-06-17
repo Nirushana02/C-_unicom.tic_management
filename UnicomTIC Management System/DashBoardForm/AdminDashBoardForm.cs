@@ -88,5 +88,10 @@ namespace UnicomTIC_Management_System.Views
         {
             LoadForm(new SubjectForm());
         }
+
+        private void btn_manag_staff_Click(object sender, EventArgs e)
+        {
+            LoadForm(new StaffForm());
+        }
     }
 }

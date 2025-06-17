@@ -27,7 +27,8 @@ namespace UnicomTIC_Management_System.Views
 
         private async void MarkForm_Load(object sender, EventArgs e)
         {
-
+            await LoadExams();
+            await LoadStudents();
         }
        
 

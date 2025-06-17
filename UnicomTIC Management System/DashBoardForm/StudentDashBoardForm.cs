@@ -15,11 +15,11 @@ namespace UnicomTIC_Management_System.DashBoardForm
     public partial class StudentDashBoardForm : Form
     {
         private int studentId;
-        public StudentDashBoardForm(int id)
+        public StudentDashBoardForm()
         {
             InitializeComponent();
             LoadForm(new DashboardForm());
-            studentId = id;
+           // studentId = id;
         }
 
         public void LoadForm(object formObj)

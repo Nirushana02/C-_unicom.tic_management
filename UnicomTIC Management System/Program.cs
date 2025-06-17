@@ -20,16 +20,10 @@ namespace UnicomTIC_Management_System
             migration.Create_Table();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            try
-            {
-                Application.Run(new LoginForm());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Startup Error: {ex.InnerException?.Message ?? ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            //Application.Run(new AdminDashBoardForm());
-            //Application.Run(new )
+            Application.Run(new LoginForm());
+            
+           
+            
         }
     }
 }

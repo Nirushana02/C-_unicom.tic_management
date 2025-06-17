@@ -27,10 +27,9 @@ namespace UnicomTIC_Management_System.Views
 
         private async void MarkForm_Load(object sender, EventArgs e)
         {
-            await LoadStudents();
-            await LoadExams();
-            await LoadMarks();
+
         }
+       
 
         private async Task LoadStudents()
         {

@@ -18,7 +18,7 @@ namespace UnicomTIC_Management_System.Controller.cs
 
             using (var conn = DBConfig.GetConnection())
             {
-                string query = @"SELECT * FROM Mark;";
+                string query = @"SELECT * FROM Marks;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -38,6 +38,33 @@ namespace UnicomTIC_Management_System.Controller.cs
                 }
             }
             return mark;
+        }
+
+        public async Task<DataTable> GetStudentMarksDetailedAsync(int studentId)
+        {
+            using (var conn = DBConfig.GetConnection())
+            {
+                string query = @"
+                SELECT 
+                    c.CourseName,
+                    s.SubjectName,
+                    e.ExamName,
+                    m.Score
+                FROM Marks m
+                INNER JOIN Students st ON m.StudentID = st.StudentID
+                INNER JOIN Exams e ON m.ExamID = e.ExamID
+                INNER JOIN Subjects s ON e.SubjectID = s.SubjectID
+                INNER JOIN Courses c ON s.CourseID = c.CourseID
+                WHERE st.StudentID = @id";
+
+                var cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", studentId);
+
+                var adapter = new SQLiteDataAdapter(cmd);
+                var table = new DataTable();
+                await Task.Run(() => adapter.Fill(table));
+                return table;
+            }
         }
 
         public async Task AddAsync(Mark mark)

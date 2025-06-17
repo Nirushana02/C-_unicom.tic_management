@@ -1,6 +1,6 @@
 ﻿namespace UnicomTIC_Management_System.DashBoardForm
 {
-    partial class StudentMarksForm
+    partial class StudentMarkForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,41 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_stu_mark = new System.Windows.Forms.DataGridView();
+            this.dvg_viewmarks = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_stu_mark)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_viewmarks)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_stu_mark
+            // dvg_viewmarks
             // 
-            this.dgv_stu_mark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_stu_mark.Location = new System.Drawing.Point(110, 119);
-            this.dgv_stu_mark.Name = "dgv_stu_mark";
-            this.dgv_stu_mark.Size = new System.Drawing.Size(389, 241);
-            this.dgv_stu_mark.TabIndex = 0;
+            this.dvg_viewmarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvg_viewmarks.Location = new System.Drawing.Point(76, 108);
+            this.dvg_viewmarks.Name = "dvg_viewmarks";
+            this.dvg_viewmarks.Size = new System.Drawing.Size(489, 267);
+            this.dvg_viewmarks.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 68);
+            this.label1.Location = new System.Drawing.Point(76, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome Student!";
+            this.label1.Text = "Welcome Student";
             // 
-            // StudentMarksForm
+            // StudentMarkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 418);
+            this.ClientSize = new System.Drawing.Size(670, 408);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv_stu_mark);
+            this.Controls.Add(this.dvg_viewmarks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StudentMarksForm";
-            this.Text = "StudentMarksForm";
-            this.Load += new System.EventHandler(this.StudentMarksForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_stu_mark)).EndInit();
+            this.Name = "StudentMarkForm";
+            this.Text = "StudentMarkForm";
+            this.Load += new System.EventHandler(this.StudentMarkForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_viewmarks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,7 +69,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_stu_mark;
+        private System.Windows.Forms.DataGridView dvg_viewmarks;
         private System.Windows.Forms.Label label1;
     }
 }

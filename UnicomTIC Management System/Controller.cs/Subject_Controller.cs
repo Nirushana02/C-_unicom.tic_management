@@ -18,7 +18,7 @@ namespace UnicomTIC_Management_System.Controller.cs
 
             using (var conn = DBConfig.GetConnection())
             {
-                string query = @"SELECT * FROM Mark;";
+                string query = @"SELECT * FROM Subject;";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {

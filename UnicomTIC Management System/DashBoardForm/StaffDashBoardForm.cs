@@ -37,5 +37,24 @@ namespace UnicomTIC_Management_System.DashBoardForm
             }
         }
 
+        private void btn_exam_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ExamForm());
+        }
+
+        private void btn_timetable_Click(object sender, EventArgs e)
+        {
+            LoadForm(new TimetableForm());
+        }
+
+        private void btn_room_Click(object sender, EventArgs e)
+        {
+            LoadForm(new RoomForm());
+        }
+
+        private void btn_course_Click(object sender, EventArgs e)
+        {
+            LoadForm(new CourseForm());
+        }
     }
 }

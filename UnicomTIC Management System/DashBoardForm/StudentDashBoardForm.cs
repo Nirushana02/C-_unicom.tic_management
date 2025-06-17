@@ -14,11 +14,12 @@ namespace UnicomTIC_Management_System.DashBoardForm
 {
     public partial class StudentDashBoardForm : Form
     {
-        public StudentDashBoardForm()
+        private int studentId;
+        public StudentDashBoardForm(int id)
         {
             InitializeComponent();
             LoadForm(new DashboardForm());
-
+            studentId = id;
         }
 
         public void LoadForm(object formObj)
@@ -41,12 +42,12 @@ namespace UnicomTIC_Management_System.DashBoardForm
 
         private void btn_marks_Click(object sender, EventArgs e)
         {
-            //LoadForm(new StudentMarksForm()); 
+            LoadForm(new StudentMarkForm(studentId));
         }
 
         private void btn_timetable_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new ReadOnlyTimetableForm());
         }
 
         private void btn_room_Click(object sender, EventArgs e)

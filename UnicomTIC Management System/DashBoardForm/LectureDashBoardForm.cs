@@ -40,12 +40,12 @@ namespace UnicomTIC_Management_System.DashBoardForm
 
         private void btn_course_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new CourseForm());
         }
 
         private void btn_timetable_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new TimetableForm()); 
         }
 
         private void btn_close_Click(object sender, EventArgs e)

@@ -30,26 +30,27 @@ namespace UnicomTIC_Management_System
        
         private async void btnadd_Click(object sender, EventArgs e)
         {
-            string name = txtBox_name.Text;
-            int courseId = Convert.ToInt32(cmb_course.SelectedValue);
-           
+            string name = txtBox_name.Text.Trim();
+            int courseId =  Convert.ToInt32(cmb_course.SelectedValue); ;
 
-            if (string.IsNullOrWhiteSpace(name))
-                {
+            if (!string.IsNullOrWhiteSpace(name))
+            {
                 await student_Controller.AddAsync(new Student
                 {
                     StudentName = name,
                     CourseID = courseId
                 });
                 txtBox_name.Clear();
+                cmb_course.Text = "";
                 await LoadStudents();
 
                 MessageBox.Show("Student Added Successfully!");
             }
             else
             {
-                MessageBox.Show("Please fill all fields!");
+                MessageBox.Show("Please fill all fields.");
             }
+
 
         }
 
@@ -63,9 +64,9 @@ namespace UnicomTIC_Management_System
                     StudentID = Clicked_Stu_Id,
                     StudentName = txtBox_name.Text,                  
                     CourseID = Convert.ToInt32(cmb_course.SelectedValue)
-                    
+
                 });
-                txtBox_name.Clear() ;                
+                txtBox_name.Clear();                
                 Clicked_Stu_Id = -1;
                 await LoadStudents();
             }
@@ -89,13 +90,13 @@ namespace UnicomTIC_Management_System
         {
             if (e.RowIndex >= 0)
             {
-               var row = dgv_stu.Rows[e.RowIndex];
-                Clicked_Stu_Id = Convert.ToInt32(row.Cells["Id"].Value);
-                txtBox_name.Text = row.Cells["Name"].Value.ToString();
-                cmb_course.SelectedValue = row.Cells["CourseId"].Value;
+                var row = dgv_stu.Rows[e.RowIndex];
+                Clicked_Stu_Id = Convert.ToInt32(row.Cells["StudentID"].Value);
+                txtBox_name.Text = row.Cells["StudentName"].Value.ToString();
+                cmb_course.SelectedValue = row.Cells["CourseID"].Value;
             }
         }
-
+        
         private async void StudentForm_Load(object sender, EventArgs e)
         {
             await LoadStudents();

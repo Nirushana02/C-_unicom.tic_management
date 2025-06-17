@@ -57,7 +57,6 @@
     <Compile Include="Controller.cs\Course_Controller.cs" />
     <Compile Include="Controller.cs\Mark_Controller.cs" />
     <Compile Include="Controller.cs\Room_Controller.cs" />
-    <Compile Include="Controller.cs\StudentTimetable_Controller.cs" />
     <Compile Include="Controller.cs\Student_Controller.cs" />
     <Compile Include="Controller.cs\Subject_Controller.cs" />
     <Compile Include="Controller.cs\Timetable_Controller.cs" />
@@ -73,6 +72,12 @@
     <Compile Include="DashBoardForm\LectureDashBoardForm.Designer.cs">
       <DependentUpon>LectureDashBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoardForm\ReadOnlyTimetableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardForm\ReadOnlyTimetableForm.Designer.cs">
+      <DependentUpon>ReadOnlyTimetableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoardForm\StaffDashBoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,17 +90,11 @@
     <Compile Include="DashBoardForm\StudentDashBoardForm.Designer.cs">
       <DependentUpon>StudentDashBoardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoardForm\StudentMarksForm.cs">
+    <Compile Include="DashBoardForm\StudentMarkForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoardForm\StudentMarksForm.Designer.cs">
-      <DependentUpon>StudentMarksForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DashBoardForm\StudentTimetableForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DashBoardForm\StudentTimetableForm.Designer.cs">
-      <DependentUpon>StudentTimetableForm.cs</DependentUpon>
+    <Compile Include="DashBoardForm\StudentMarkForm.Designer.cs">
+      <DependentUpon>StudentMarkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DBConfig.cs" />
     <Compile Include="Data\Migration.cs" />
@@ -185,17 +184,17 @@
     <EmbeddedResource Include="DashBoardForm\LectureDashBoardForm.resx">
       <DependentUpon>LectureDashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardForm\ReadOnlyTimetableForm.resx">
+      <DependentUpon>ReadOnlyTimetableForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm\StaffDashBoardForm.resx">
       <DependentUpon>StaffDashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm\StudentDashBoardForm.resx">
       <DependentUpon>StudentDashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoardForm\StudentMarksForm.resx">
-      <DependentUpon>StudentMarksForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DashBoardForm\StudentTimetableForm.resx">
-      <DependentUpon>StudentTimetableForm.cs</DependentUpon>
+    <EmbeddedResource Include="DashBoardForm\StudentMarkForm.resx">
+      <DependentUpon>StudentMarkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ExamForm.resx">
       <DependentUpon>ExamForm.cs</DependentUpon>

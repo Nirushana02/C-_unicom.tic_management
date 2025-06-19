@@ -36,12 +36,13 @@
             this.txtBox_name = new System.Windows.Forms.TextBox();
             this.cmb_course = new System.Windows.Forms.ComboBox();
             this.dgv_stu = new System.Windows.Forms.DataGridView();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(73, 189);
+            this.btnadd.Location = new System.Drawing.Point(37, 189);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(110, 23);
             this.btnadd.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Location = new System.Drawing.Point(248, 189);
+            this.btnupdate.Location = new System.Drawing.Point(207, 189);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(129, 23);
             this.btnupdate.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(441, 189);
+            this.btndelete.Location = new System.Drawing.Point(393, 189);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(129, 23);
             this.btndelete.TabIndex = 2;
@@ -114,11 +115,22 @@
             this.dgv_stu.TabIndex = 9;
             this.dgv_stu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_stu_CellContentClick);
             // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(560, 189);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(89, 23);
+            this.btn_del_all.TabIndex = 10;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 447);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_stu);
             this.Controls.Add(this.cmb_course);
             this.Controls.Add(this.txtBox_name);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.TextBox txtBox_name;
         private System.Windows.Forms.ComboBox cmb_course;
         private System.Windows.Forms.DataGridView dgv_stu;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

@@ -18,6 +18,7 @@ namespace UnicomTIC_Management_System
     {
        
         private Student_Controller student_Controller = new Student_Controller();
+
         private Course_Controller course_Controller = new Course_Controller();
         private int Clicked_Stu_Id = -1;
         
@@ -117,5 +118,18 @@ namespace UnicomTIC_Management_System
             cmb_course.ValueMember = "CourseID";
         }
 
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all students and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await student_Controller.ResetStudentDataAsync(); // Resetting IDs
+                txtBox_name.Clear();
+                Clicked_Stu_Id = -1;
+                await LoadStudents();
+                MessageBox.Show("All students deleted, and IDs reset.");
+            }
+        }
     }
 }

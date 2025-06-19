@@ -82,6 +82,10 @@
             // combo_sbu
             // 
             this.combo_sbu.FormattingEnabled = true;
+            this.combo_sbu.Items.AddRange(new object[] {
+            "ICT",
+            "Java",
+            "JavaScript"});
             this.combo_sbu.Location = new System.Drawing.Point(156, 88);
             this.combo_sbu.Name = "combo_sbu";
             this.combo_sbu.Size = new System.Drawing.Size(183, 21);

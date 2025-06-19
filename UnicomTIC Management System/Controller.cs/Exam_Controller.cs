@@ -43,7 +43,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         { 
             using (var conn = DBConfig.GetConnection())
             {
-                string query = "INSERT INTO Exam (ExamName, SubjectID) VALUES (@name, @sbjectId);";
+                string query = "INSERT INTO Exam (ExamName, SubjectID) VALUES (@name, @subjectId);";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@name", exam.ExamName);

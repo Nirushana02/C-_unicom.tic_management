@@ -100,5 +100,42 @@ namespace UnicomTIC_Management_System.Controller.cs
 
         }
 
+        public async Task ResetStudentDataAsync()
+        {
+            using (var conn = DBConfig.GetConnection())
+            {
+                //conn.Open();
+
+                using (var transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Step 1: Delete all rows from the Student table
+                        string deleteQuery = "DELETE FROM Student;";
+                        using (SQLiteCommand deleteCmd = new SQLiteCommand(deleteQuery, conn))
+                        {
+                            await deleteCmd.ExecuteNonQueryAsync();
+                        }
+
+                        // Step 2: Reset the AUTOINCREMENT ID
+                        string resetQuery = "DELETE FROM sqlite_sequence WHERE name = 'Student';";
+                        using (SQLiteCommand resetCmd = new SQLiteCommand(resetQuery, conn))
+                        {
+                            await resetCmd.ExecuteNonQueryAsync();
+                        }
+
+                        // Commit transaction
+                        transaction.Commit();
+                        Console.WriteLine("All student data cleared, and ID reset.");
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine($"Error resetting student data: {ex.Message}");
+                    }
+                }
+            }
+        }
+
     }
 }

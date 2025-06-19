@@ -51,10 +51,10 @@ namespace UnicomTIC_Management_System.Controller.cs
                     e.ExamName,
                     m.Score
                 FROM Marks m
-                INNER JOIN Students st ON m.StudentID = st.StudentID
-                INNER JOIN Exams e ON m.ExamID = e.ExamID
-                INNER JOIN Subjects s ON e.SubjectID = s.SubjectID
-                INNER JOIN Courses c ON s.CourseID = c.CourseID
+                INNER JOIN Student st ON m.StudentID = st.StudentID
+                INNER JOIN Exam e ON m.ExamID = e.ExamID
+                INNER JOIN Subject s ON e.SubjectID = s.SubjectID
+                INNER JOIN Course c ON s.CourseID = c.CourseID
                 WHERE st.StudentID = @id";
 
                 var cmd = new SQLiteCommand(query, conn);

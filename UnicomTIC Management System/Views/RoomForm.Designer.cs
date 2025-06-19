@@ -75,7 +75,7 @@
             // dgv_room
             // 
             this.dgv_room.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_room.Location = new System.Drawing.Point(149, 230);
+            this.dgv_room.Location = new System.Drawing.Point(136, 184);
             this.dgv_room.Name = "dgv_room";
             this.dgv_room.Size = new System.Drawing.Size(363, 190);
             this.dgv_room.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(134, 173);
+            this.btn_add.Location = new System.Drawing.Point(118, 131);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(291, 173);
+            this.btn_update.Location = new System.Drawing.Point(270, 131);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(451, 173);
+            this.btn_delete.Location = new System.Drawing.Point(437, 131);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 7;

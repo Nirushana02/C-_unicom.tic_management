@@ -17,42 +17,34 @@ namespace UnicomTIC_Management_System.Controller.cs
     {
         public Login_Controller() { }
 
-        public async Task AddDefaultUsersAsync()
+        public async Task<User> ValidateStudentAsync(string name, string studentId)
         {
             using (var conn = DBConfig.GetConnection())
             {
-                await conn.OpenAsync();
-                string query = @"
-                    INSERT INTO User (role, name, password) VALUES 
-                    ('Admin', 'admin', 'admin123'),
-                    ('Student', 'student', 'student123'),
-                    ('Lecture', 'lecture', 'lecture123'),
-                    ('Staff', 'staff', 'staff123');";
+                var cmd = new SQLiteCommand("SELECT * FROM Student WHERE StudentName = @name AND StudentID = @id", conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@id", studentId);
 
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    await cmd.ExecuteNonQueryAsync();
+                    if (await reader.ReadAsync())
+                    {
+                        return new User
+                        {
+                            UserID = Convert.ToInt32(reader["StudentID"]),
+                            UserName = reader["StudentName"].ToString(),
+                            Password = reader["StudentID"].ToString(),
+                            Role = "Student"
+                        };
+                    }
                 }
             }
-        }
 
-        public void AddUser(User user)
-        {
-            using (var conn = DBConfig.GetConnection())
-            {
-                conn.Open();
-                string query = "INSERT INTO User (role, name, password) VALUES (@Role, @Name, @Password);";
 
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Role", user.Role);
-                    cmd.Parameters.AddWithValue("@Name", user.UserName);
-                    cmd.Parameters.AddWithValue("@Password", user.Password);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            return null;
         }
     }
 }
+
 
 

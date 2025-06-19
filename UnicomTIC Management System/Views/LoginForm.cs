@@ -39,73 +39,55 @@ namespace UnicomTIC_Management_System.Views
             txt_pass.PasswordChar = chebox_pass.Checked ? '\0' : '*';       
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private async void btn_login_Click(object sender, EventArgs e)
         {
-            string[,] credentials = new string[,]
-            {
-                {"Admin", "admin", "admin123"},
-                {"Student", "student", "student123" },
-                {"Staff", "staff", "staff123"},
-                {"Lecture", "lecture", "lecture123"}
-            };
-            // Retrieve user input
-            string role = comboBox_role.Text;
-            string username = txt_name.Text;
-            string password = txt_pass.Text;
 
-            // Basic validation
+            string username = txt_name.Text.Trim();
+            string password = txt_pass.Text.Trim();
+            string selectedRole = comboBox_role.SelectedItem.ToString();
+
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            var login_Controller = new Login_Controller();
 
-            // Verify credentials
-            bool isValid = false;
-            for (int i = 0; i < credentials.GetLength(0); i++)
+            if (selectedRole == "Student")
             {
-                if (credentials[i, 0] == role &&
-                    credentials[i, 1] == username &&
-                     credentials[i, 2] == password)
+                var user = await login_Controller.ValidateStudentAsync(username, password);
+                if (user != null)
                 {
-                    isValid = true;
-                    break;
+                    MessageBox.Show("Login successful as Student", "Success");
+                    this.Hide();
+                    new StudentDashBoardForm(user.UserID).Show();
                 }
-            }
-
-            if (isValid)
-            {
-                MessageBox.Show($"Login successful as {role}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-
-                if (role.ToLower() == "admin")
+                else
                 {
-                    AdminDashBoardForm adminDashBoardForm = new AdminDashBoardForm();
-                    adminDashBoardForm.Show();
+                    MessageBox.Show("Invalid Student name or ID", "Login Failed");
                 }
-                else if (role.ToLower() == "student")
-                {
-                    StudentDashBoardForm studentDashBoardForm = new StudentDashBoardForm();
-                    studentDashBoardForm.Show();
-                }
-                else if (role.ToLower() == "staff")
-                {
-                   StaffDashBoardForm staffDashBoardForm = new StaffDashBoardForm();
-                   staffDashBoardForm.Show();
-                }
-
-                else if (role.ToLower() == "lecture")
-                {
-                    LectureDashBoardForm lectureDashBoardForm = new LectureDashBoardForm();
-                    lectureDashBoardForm.Show();
-                }
-
-
             }
             else
             {
-                MessageBox.Show("Invalid credentials. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if ((selectedRole == "Admin" && username == "admin" && password == "admin123") ||
+                    (selectedRole == "Staff" && username == "staff" && password == "staff123") ||
+                    (selectedRole == "Lecturer" && username == "lecturer" && password == "lecturer123"))
+                {
+                    this.Hide();
+
+                    if (selectedRole == "Admin")
+                        new AdminDashBoardForm().ShowDialog();
+                    else if (selectedRole == "Staff")
+                        new StaffDashBoardForm().ShowDialog();
+                    else if (selectedRole == "Lecturer")
+                        new LectureDashBoardForm().ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password", "Login Failed");
+                }
             }
 
         }

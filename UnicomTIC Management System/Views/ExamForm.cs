@@ -56,12 +56,12 @@ namespace UnicomTIC_Management_System.Views
                 txt_exam.Clear();
                 await LoadExams();
 
-                MessageBox.Show("Exam added Successfully!");
+                MessageBox.Show("Exam added Successfully!", "Success ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
             {
-                MessageBox.Show("Please enter exam name.");
+                MessageBox.Show("Please enter exam name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -82,12 +82,12 @@ namespace UnicomTIC_Management_System.Views
                 Clicked_ExamId = -1;
                 await LoadExams();
 
-                MessageBox.Show("Exam updated Successfully!");
+                MessageBox.Show("Exam name updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
             {
-                MessageBox.Show("Please select the exam name to update!");
+                MessageBox.Show("Please select the exam name to update!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -99,6 +99,13 @@ namespace UnicomTIC_Management_System.Views
                 txt_exam.Clear();
                 Clicked_ExamId = -1;
                 await LoadExams();
+
+                MessageBox.Show("Exam details deleted Successfully!", "Successr", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                MessageBox.Show("Please select the exam name to Delete", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -123,7 +130,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_exam.Clear();
                 Clicked_ExamId = -1;
                 await LoadExams();
-                MessageBox.Show("All exams deleted, and IDs reset.");
+                MessageBox.Show("All exams deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

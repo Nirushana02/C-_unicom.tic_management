@@ -28,17 +28,12 @@ namespace UnicomTIC_Management_System.Views
         private async void MarkForm_Load(object sender, EventArgs e)
         {
             await LoadExams();
-            await LoadStudents();
+            //await LoadStudents();
+            await LoadMarks();
         }
        
 
-        private async Task LoadStudents()
-        {
-            var student = await student_Controller.GetStudentsAsync();
-            cmd_student.DataSource = student;
-            cmd_student.DisplayMember = "StudentName";
-            cmd_student.ValueMember = "StudentID";
-        }
+        
 
         private async Task LoadExams()
         {
@@ -55,7 +50,7 @@ namespace UnicomTIC_Management_System.Views
 
         private async void btn_add_Click(object sender, EventArgs e)
         {
-            int studentId = Convert.ToInt32(cmd_student.SelectedValue);
+            int studentId = Convert.ToInt32(txt_name.Tag);
             int examId = Convert.ToInt32(cmd_exam.SelectedValue);
             int score = Convert.ToInt32(txt_score.Text);
 
@@ -65,9 +60,11 @@ namespace UnicomTIC_Management_System.Views
                 ExamID = examId,
                 Score = score
             });
-
+            txt_name.Clear();
             txt_score.Clear();
             await LoadMarks();
+
+            MessageBox.Show("Marks Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -78,14 +75,17 @@ namespace UnicomTIC_Management_System.Views
                 await mark_Controller.UpdateAsync(new Mark
                 {
                     MarkID = Clicked_MarkId,
-                    StudentID = Convert.ToInt32(cmd_student.SelectedValue),
+                    StudentID = Convert.ToInt32(txt_name.Tag),
                     ExamID = Convert.ToInt32(cmd_exam.SelectedValue),
                     Score = Convert.ToInt32(txt_score.Text)
                 });
 
+                txt_name.Clear();
                 txt_score.Clear();
                 Clicked_MarkId = -1;
                 await LoadMarks();
+
+                MessageBox.Show("Marks Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -94,10 +94,14 @@ namespace UnicomTIC_Management_System.Views
             if (Clicked_MarkId != -1)
             {
                await mark_Controller.DeleteAsync(Clicked_MarkId);
+                txt_name.Clear();
                 txt_score.Clear();
                 Clicked_MarkId = -1;
                 await LoadMarks();
-            };
+
+                MessageBox.Show("Marks Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            ;
         }
 
         private void dgv_marks_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,7 +110,8 @@ namespace UnicomTIC_Management_System.Views
             {
                 var row = dgv_marks.Rows[e.RowIndex];
                 Clicked_MarkId = Convert.ToInt32(row.Cells["MarkID"].Value);
-                cmd_student.SelectedValue = row.Cells["StudentID"].Value;
+                int studentId = Convert.ToInt32(row.Cells["StudentID"].Value);
+                //cmd_student.SelectedValue = row.Cells["StudentID"].Value;
                 cmd_exam.SelectedValue = row.Cells["ExamID"].Value;
                 txt_score.Text = row.Cells["Score"].Value.ToString();
             }
@@ -119,10 +124,11 @@ namespace UnicomTIC_Management_System.Views
             if (confirmation == DialogResult.Yes)
             {
                 await mark_Controller.ResetMarkDataAsync(); // Resetting IDs
+                txt_name.Clear();
                 txt_score.Clear();
                 Clicked_MarkId = -1;
                 await LoadMarks();
-                MessageBox.Show("All marks deleted, and IDs reset.");
+                MessageBox.Show("All marks deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

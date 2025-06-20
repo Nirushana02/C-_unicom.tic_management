@@ -67,6 +67,12 @@
     <Compile Include="DashBoardForm\LectureDashBoardForm.Designer.cs">
       <DependentUpon>LectureDashBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoardForm\ReadOnlyRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardForm\ReadOnlyRoomForm.Designer.cs">
+      <DependentUpon>ReadOnlyRoomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoardForm\ReadOnlyTimetableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm\LectureDashBoardForm.resx">
       <DependentUpon>LectureDashBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardForm\ReadOnlyRoomForm.resx">
+      <DependentUpon>ReadOnlyRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm\ReadOnlyTimetableForm.resx">
       <DependentUpon>ReadOnlyTimetableForm.cs</DependentUpon>

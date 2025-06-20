@@ -39,13 +39,14 @@
             this.btn_c_delete = new System.Windows.Forms.Button();
             this.dgv_course = new System.Windows.Forms.DataGridView();
             this.btn_del_all = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_course)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_cname
             // 
             this.lbl_cname.AutoSize = true;
-            this.lbl_cname.Location = new System.Drawing.Point(36, 123);
+            this.lbl_cname.Location = new System.Drawing.Point(95, 127);
             this.lbl_cname.Name = "lbl_cname";
             this.lbl_cname.Size = new System.Drawing.Size(74, 13);
             this.lbl_cname.TabIndex = 0;
@@ -54,7 +55,7 @@
             // lbl_start
             // 
             this.lbl_start.AutoSize = true;
-            this.lbl_start.Location = new System.Drawing.Point(36, 171);
+            this.lbl_start.Location = new System.Drawing.Point(98, 192);
             this.lbl_start.Name = "lbl_start";
             this.lbl_start.Size = new System.Drawing.Size(58, 13);
             this.lbl_start.TabIndex = 2;
@@ -62,7 +63,7 @@
             // 
             // txt_cname
             // 
-            this.txt_cname.Location = new System.Drawing.Point(125, 120);
+            this.txt_cname.Location = new System.Drawing.Point(198, 127);
             this.txt_cname.Name = "txt_cname";
             this.txt_cname.Size = new System.Drawing.Size(159, 20);
             this.txt_cname.TabIndex = 4;
@@ -70,7 +71,7 @@
             // lbl_end
             // 
             this.lbl_end.AutoSize = true;
-            this.lbl_end.Location = new System.Drawing.Point(36, 217);
+            this.lbl_end.Location = new System.Drawing.Point(98, 251);
             this.lbl_end.Name = "lbl_end";
             this.lbl_end.Size = new System.Drawing.Size(55, 13);
             this.lbl_end.TabIndex = 5;
@@ -78,21 +79,21 @@
             // 
             // dtp_start
             // 
-            this.dtp_start.Location = new System.Drawing.Point(125, 165);
+            this.dtp_start.Location = new System.Drawing.Point(198, 186);
             this.dtp_start.Name = "dtp_start";
             this.dtp_start.Size = new System.Drawing.Size(200, 20);
             this.dtp_start.TabIndex = 6;
             // 
             // dtp_end
             // 
-            this.dtp_end.Location = new System.Drawing.Point(125, 217);
+            this.dtp_end.Location = new System.Drawing.Point(198, 249);
             this.dtp_end.Name = "dtp_end";
             this.dtp_end.Size = new System.Drawing.Size(200, 20);
             this.dtp_end.TabIndex = 7;
             // 
             // btn_c_add
             // 
-            this.btn_c_add.Location = new System.Drawing.Point(29, 277);
+            this.btn_c_add.Location = new System.Drawing.Point(128, 289);
             this.btn_c_add.Name = "btn_c_add";
             this.btn_c_add.Size = new System.Drawing.Size(75, 23);
             this.btn_c_add.TabIndex = 8;
@@ -102,7 +103,7 @@
             // 
             // btn_c_update
             // 
-            this.btn_c_update.Location = new System.Drawing.Point(137, 277);
+            this.btn_c_update.Location = new System.Drawing.Point(282, 289);
             this.btn_c_update.Name = "btn_c_update";
             this.btn_c_update.Size = new System.Drawing.Size(75, 23);
             this.btn_c_update.TabIndex = 9;
@@ -112,7 +113,7 @@
             // 
             // btn_c_delete
             // 
-            this.btn_c_delete.Location = new System.Drawing.Point(238, 277);
+            this.btn_c_delete.Location = new System.Drawing.Point(440, 289);
             this.btn_c_delete.Name = "btn_c_delete";
             this.btn_c_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_c_delete.TabIndex = 10;
@@ -123,15 +124,15 @@
             // dgv_course
             // 
             this.dgv_course.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_course.Location = new System.Drawing.Point(340, 54);
+            this.dgv_course.Location = new System.Drawing.Point(186, 332);
             this.dgv_course.Name = "dgv_course";
-            this.dgv_course.Size = new System.Drawing.Size(334, 307);
+            this.dgv_course.Size = new System.Drawing.Size(405, 185);
             this.dgv_course.TabIndex = 11;
             this.dgv_course.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_course_CellContentClick);
             // 
             // btn_del_all
             // 
-            this.btn_del_all.Location = new System.Drawing.Point(125, 332);
+            this.btn_del_all.Location = new System.Drawing.Point(594, 289);
             this.btn_del_all.Name = "btn_del_all";
             this.btn_del_all.Size = new System.Drawing.Size(99, 23);
             this.btn_del_all.TabIndex = 12;
@@ -139,9 +140,20 @@
             this.btn_del_all.UseVisualStyleBackColor = true;
             this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 24);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Course Details...";
+            // 
             // CourseForm
             // 
-            this.ClientSize = new System.Drawing.Size(686, 447);
+            this.ClientSize = new System.Drawing.Size(821, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_course);
             this.Controls.Add(this.btn_c_delete);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Button btn_c_delete;
         private System.Windows.Forms.DataGridView dgv_course;
         private System.Windows.Forms.Button btn_del_all;
+        private System.Windows.Forms.Label label1;
     }
 }

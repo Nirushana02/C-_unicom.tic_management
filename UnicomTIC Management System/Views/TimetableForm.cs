@@ -38,6 +38,8 @@ namespace UnicomTIC_Management_System.Views
             await timetable_Controller.AddAsync(timetable);
             txt_time.Clear();
             await LoadTimetables();
+
+            MessageBox.Show("Timetable Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private async void btn_update_Click(object sender, EventArgs e)
@@ -56,6 +58,8 @@ namespace UnicomTIC_Management_System.Views
                 txt_time.Clear();
                 Clicked_Timetable_Id = -1;
                 await LoadTimetables();
+
+                MessageBox.Show("Timetable Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -80,6 +84,8 @@ namespace UnicomTIC_Management_System.Views
                 txt_time.Clear();
                 Clicked_Timetable_Id = -1;
                 await LoadTimetables();
+
+                MessageBox.Show("Timetable Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -121,7 +127,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_time.Clear();
                 Clicked_Timetable_Id = -1;
                 await LoadTimetables();
-                MessageBox.Show("All timetables deleted, and IDs reset.");
+                MessageBox.Show("All timetables deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

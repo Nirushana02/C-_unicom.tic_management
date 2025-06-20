@@ -37,10 +37,12 @@ namespace UnicomTIC_Management_System.Views
                 txt_lec_name.Clear();
                 txt_lec_add.Clear();
                 await LoadLectures();
+
+                MessageBox.Show("Lecture updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Please enter lecture name and address.");
+                MessageBox.Show("Please enter lecture name and address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -61,7 +63,7 @@ namespace UnicomTIC_Management_System.Views
                         Address = txt_lec_add.Text
                     });
 
-                    MessageBox.Show("Lecture updated successfully!");
+                    MessageBox.Show("Lecture updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     txt_lec_name.Clear();
                     Clicked_LectureId = -1;
@@ -70,7 +72,7 @@ namespace UnicomTIC_Management_System.Views
 
                 else
                 {
-                    MessageBox.Show("Please enter both lecture name and address.");
+                    MessageBox.Show("Please enter both lecture name and address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -147,7 +149,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_lec_name.Clear();
                 Clicked_LectureId = -1;
                 await LoadLectures();
-                MessageBox.Show("All lectures deleted, and IDs reset.");
+                MessageBox.Show("All lectures deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

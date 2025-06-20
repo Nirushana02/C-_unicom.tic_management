@@ -41,13 +41,14 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.dgv_staff = new System.Windows.Forms.DataGridView();
             this.btn_del_all = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_staff)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 43);
+            this.label1.Location = new System.Drawing.Point(55, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(375, 47);
+            this.label2.Location = new System.Drawing.Point(414, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 119);
+            this.label3.Location = new System.Drawing.Point(55, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(375, 126);
+            this.label4.Location = new System.Drawing.Point(414, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
@@ -82,14 +83,14 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(130, 40);
+            this.txt_name.Location = new System.Drawing.Point(160, 119);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(185, 20);
             this.txt_name.TabIndex = 4;
             // 
             // txt_number
             // 
-            this.txt_number.Location = new System.Drawing.Point(130, 119);
+            this.txt_number.Location = new System.Drawing.Point(160, 187);
             this.txt_number.Name = "txt_number";
             this.txt_number.Size = new System.Drawing.Size(185, 20);
             this.txt_number.TabIndex = 5;
@@ -100,7 +101,7 @@
             this.cmb_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmb_gender.Location = new System.Drawing.Point(458, 44);
+            this.cmb_gender.Location = new System.Drawing.Point(481, 114);
             this.cmb_gender.Name = "cmb_gender";
             this.cmb_gender.Size = new System.Drawing.Size(185, 21);
             this.cmb_gender.TabIndex = 6;
@@ -111,14 +112,14 @@
             this.cmb_status.Items.AddRange(new object[] {
             "Married",
             "Unmarried"});
-            this.cmb_status.Location = new System.Drawing.Point(458, 119);
+            this.cmb_status.Location = new System.Drawing.Point(481, 186);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(185, 21);
             this.cmb_status.TabIndex = 7;
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(96, 167);
+            this.btn_add.Location = new System.Drawing.Point(103, 258);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 8;
@@ -128,7 +129,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(240, 167);
+            this.btn_update.Location = new System.Drawing.Point(253, 258);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 9;
@@ -138,7 +139,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(378, 167);
+            this.btn_delete.Location = new System.Drawing.Point(408, 258);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 10;
@@ -149,7 +150,7 @@
             // dgv_staff
             // 
             this.dgv_staff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_staff.Location = new System.Drawing.Point(75, 196);
+            this.dgv_staff.Location = new System.Drawing.Point(142, 308);
             this.dgv_staff.Name = "dgv_staff";
             this.dgv_staff.Size = new System.Drawing.Size(489, 200);
             this.dgv_staff.TabIndex = 11;
@@ -157,7 +158,7 @@
             // 
             // btn_del_all
             // 
-            this.btn_del_all.Location = new System.Drawing.Point(495, 166);
+            this.btn_del_all.Location = new System.Drawing.Point(561, 258);
             this.btn_del_all.Name = "btn_del_all";
             this.btn_del_all.Size = new System.Drawing.Size(93, 23);
             this.btn_del_all.TabIndex = 12;
@@ -165,11 +166,22 @@
             this.btn_del_all.UseVisualStyleBackColor = true;
             this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(54, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 24);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Staff Details...";
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 408);
+            this.ClientSize = new System.Drawing.Size(821, 529);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_staff);
             this.Controls.Add(this.btn_delete);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dgv_staff;
         private System.Windows.Forms.Button btn_del_all;
+        private System.Windows.Forms.Label label5;
     }
 }

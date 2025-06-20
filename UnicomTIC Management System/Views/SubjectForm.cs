@@ -57,12 +57,12 @@ namespace UnicomTIC_Management_System.Views
                 txt_sub.Clear();
                 await LoadSubjects();
                 {
-                    MessageBox.Show("Subject addes Successfully!");
+                    MessageBox.Show("Subject addes Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Please enter subject name.");
+                MessageBox.Show("Please enter subject name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -79,6 +79,8 @@ namespace UnicomTIC_Management_System.Views
                 txt_sub.Clear();
                 Clicked_SubjectId = -1;
                 await LoadSubjects();
+
+                MessageBox.Show("Subject Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -90,6 +92,8 @@ namespace UnicomTIC_Management_System.Views
                 txt_sub.Clear();
                 Clicked_SubjectId = -1;
                 await LoadSubjects();
+
+                MessageBox.Show("Subject Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -114,7 +118,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_sub.Clear();
                 Clicked_SubjectId = -1;
                 await LoadSubjects();
-                MessageBox.Show("All subject deleted, and IDs reset.");
+                MessageBox.Show("All subject deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

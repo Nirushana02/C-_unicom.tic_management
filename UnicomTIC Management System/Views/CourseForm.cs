@@ -51,11 +51,13 @@ namespace UnicomTIC_Management_System.Views
                 });
                 txt_cname.Clear();
                 await LoadCourses();
+
+                MessageBox.Show("Course addes Successfylly", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
             {
-                MessageBox.Show("Please enter all fields");
+                MessageBox.Show("Please enter all fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -89,12 +91,12 @@ namespace UnicomTIC_Management_System.Views
                 Clicked_Id = -1;
                 await LoadCourses();
 
-                MessageBox.Show("Course Deleted Sucessfully");
+                MessageBox.Show("Course Deleted Sucessfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
             {
-                MessageBox.Show("Error in Delete");
+                MessageBox.Show("Error in Delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -118,7 +120,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_cname.Clear();
                 Clicked_Id = -1;
                 await LoadCourses();
-                MessageBox.Show("All courses deleted, and IDs reset.");
+                MessageBox.Show("All courses deleted, and IDs reset.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

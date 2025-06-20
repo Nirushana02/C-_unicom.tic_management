@@ -59,13 +59,13 @@ namespace UnicomTIC_Management_System.Views
                 var user = await login_Controller.ValidateStudentAsync(username, password);
                 if (user != null)
                 {
-                    MessageBox.Show("Login successful as Student", "Success");
+                    MessageBox.Show("Login successful as Student", "Success",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     new StudentDashBoardForm(user.UserID).Show();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Student name or ID", "Login Failed");
+                    MessageBox.Show("Invalid Student name or ID", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -75,6 +75,8 @@ namespace UnicomTIC_Management_System.Views
                     (selectedRole == "Staff" && username == "staff" && password == "staff123") ||
                     (selectedRole == "Lecture" && username == "lecture" && password == "lecture123"))
                 {
+                    MessageBox.Show($"Login successful as {selectedRole}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     this.Hide();
 
                     if (selectedRole == "Admin")
@@ -86,7 +88,7 @@ namespace UnicomTIC_Management_System.Views
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password", "Login Failed");
+                    MessageBox.Show("Invalid username or password", "Login Failed",  MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

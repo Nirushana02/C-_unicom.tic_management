@@ -40,7 +40,29 @@ namespace UnicomTIC_Management_System.Views
             string gender = cmb_gender.SelectedItem?.ToString();
             string status = cmb_status.SelectedItem?.ToString();
 
-            if (!string.IsNullOrWhiteSpace(name) || !string.IsNullOrWhiteSpace(gender))
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageBox.Show("Please enter a name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(number, out _))
+            {
+                MessageBox.Show("Please enter a valid numeric phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (number.Length != 10)
+            {
+                MessageBox.Show("Phone number must be exactly 10 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(gender) || string.IsNullOrWhiteSpace(status))
+            {
+                MessageBox.Show("Please select a gender and status.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             {
                 staff_Controller.AddAsync(new Staff
                 {
@@ -150,7 +172,7 @@ namespace UnicomTIC_Management_System.Views
                 txt_name.Clear();
                 Clicked_ID = -1;
                 await LoadStaffs();
-                MessageBox.Show("All staff deleted, and IDs reset.");
+                MessageBox.Show("All staff deleted, and IDs reset.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -40,32 +40,60 @@ namespace UnicomTIC_Management_System.Controller.cs
             return mark;
         }
 
-        public async Task<DataTable> GetStudentMarksDetailedAsync(int studentId)
+        public async Task<List<Mark>> GetMarksByStudentIdAsync(int studentId)
         {
+            List<Mark> marks = new List<Mark>();
+
+            using (var conn = DBConfig.GetConnection())
+            {
+                string query = "SELECT * FROM Marks WHERE StudentID = @sid;";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sid", studentId);
+                    using (SQLiteDataReader reader = (SQLiteDataReader)await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            marks.Add(new Mark
+                            {
+                                MarkID = reader.GetInt32(0),
+                                StudentID = reader.GetInt32(1),
+                                ExamID = reader.GetInt32(2),
+                                Score = reader.GetInt32(3)
+                            });
+                        }
+                    }
+                }
+            }
+
+            return marks;
+            }
+
+        public DataTable GetStudentMarksDetailed(int studentId)
+        {
+            DataTable dt = new DataTable();
+
             using (var conn = DBConfig.GetConnection())
             {
                 string query = @"
-                SELECT 
-                    c.CourseName,
-                    s.SubjectName,
-                    e.ExamName,
-                    m.Score
-                FROM Marks m
-                INNER JOIN Student st ON m.StudentID = st.StudentID
-                INNER JOIN Exam e ON m.ExamID = e.ExamID
-                INNER JOIN Subject s ON e.SubjectID = s.SubjectID
-                INNER JOIN Course c ON s.CourseID = c.CourseID
-                WHERE st.StudentID = @id";
+                    SELECT m.MarkID, m.StudentID, m.ExamID, m.Score
+                    FROM Marks m
+                    WHERE m.StudentID = @sid;";
 
-                var cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id", studentId);
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sid", studentId);
 
-                var adapter = new SQLiteDataAdapter(cmd);
-                var table = new DataTable();
-                await Task.Run(() => adapter.Fill(table));
-                return table;
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
             }
+
+            return dt;
         }
+
 
         public async Task AddAsync(Mark mark)
 

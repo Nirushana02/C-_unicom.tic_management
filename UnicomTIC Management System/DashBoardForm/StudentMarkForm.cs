@@ -23,9 +23,9 @@ namespace UnicomTIC_Management_System.DashBoardForm
             this.Load += StudentMarkForm_Load;
         }
 
-        private async void StudentMarkForm_Load(object sender, EventArgs e)
+        private void StudentMarkForm_Load(object sender, EventArgs e)
         {
-            DataTable marksTable = await mark_Controller.GetStudentMarksDetailedAsync(studentID);
+            DataTable marksTable = mark_Controller.GetStudentMarksDetailed(studentID);
             dvg_viewmarks.DataSource = marksTable;
 
             dvg_viewmarks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

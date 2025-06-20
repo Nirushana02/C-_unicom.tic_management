@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,11 +46,11 @@ namespace UnicomTIC_Management_System
                 cmb_course.Text = "";
                 await LoadStudents();
 
-                MessageBox.Show("Student Added Successfully!");
+                MessageBox.Show("Student Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Please fill all fields.");
+                MessageBox.Show("Please fill all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -70,6 +71,12 @@ namespace UnicomTIC_Management_System
                 txtBox_name.Clear();                
                 Clicked_Stu_Id = -1;
                 await LoadStudents();
+
+                MessageBox.Show("Student Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -83,6 +90,11 @@ namespace UnicomTIC_Management_System
                 Clicked_Stu_Id = -1;
                 await LoadStudents();
 
+                MessageBox.Show("Student Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
            
         }
@@ -128,7 +140,7 @@ namespace UnicomTIC_Management_System
                 txtBox_name.Clear();
                 Clicked_Stu_Id = -1;
                 await LoadStudents();
-                MessageBox.Show("All students deleted, and IDs reset.");
+                MessageBox.Show("All students deleted, and IDs reset.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -37,12 +37,13 @@
             this.lbl_course = new System.Windows.Forms.Label();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_del_all = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_exam)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(120, 141);
+            this.btn_add.Location = new System.Drawing.Point(141, 209);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(90, 23);
             this.btn_add.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(251, 141);
+            this.btn_update.Location = new System.Drawing.Point(279, 209);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(97, 23);
             this.btn_update.TabIndex = 1;
@@ -63,7 +64,7 @@
             // dgv_exam
             // 
             this.dgv_exam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_exam.Location = new System.Drawing.Point(107, 187);
+            this.dgv_exam.Location = new System.Drawing.Point(193, 266);
             this.dgv_exam.Name = "dgv_exam";
             this.dgv_exam.Size = new System.Drawing.Size(430, 209);
             this.dgv_exam.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // txt_exam
             // 
-            this.txt_exam.Location = new System.Drawing.Point(304, 36);
+            this.txt_exam.Location = new System.Drawing.Point(374, 87);
             this.txt_exam.Name = "txt_exam";
             this.txt_exam.Size = new System.Drawing.Size(182, 20);
             this.txt_exam.TabIndex = 3;
@@ -83,7 +84,7 @@
             "Programming",
             "UI Design",
             "Code Developer"});
-            this.cmb_sub.Location = new System.Drawing.Point(304, 82);
+            this.cmb_sub.Location = new System.Drawing.Point(374, 141);
             this.cmb_sub.Name = "cmb_sub";
             this.cmb_sub.Size = new System.Drawing.Size(182, 21);
             this.cmb_sub.TabIndex = 4;
@@ -91,24 +92,26 @@
             // lbl_sub
             // 
             this.lbl_sub.AutoSize = true;
-            this.lbl_sub.Location = new System.Drawing.Point(164, 36);
+            this.lbl_sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sub.Location = new System.Drawing.Point(261, 90);
             this.lbl_sub.Name = "lbl_sub";
-            this.lbl_sub.Size = new System.Drawing.Size(67, 13);
+            this.lbl_sub.Size = new System.Drawing.Size(84, 16);
             this.lbl_sub.TabIndex = 5;
             this.lbl_sub.Text = "Exam Name:";
             // 
             // lbl_course
             // 
             this.lbl_course.AutoSize = true;
-            this.lbl_course.Location = new System.Drawing.Point(164, 90);
+            this.lbl_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_course.Location = new System.Drawing.Point(261, 144);
             this.lbl_course.Name = "lbl_course";
-            this.lbl_course.Size = new System.Drawing.Size(46, 13);
+            this.lbl_course.Size = new System.Drawing.Size(58, 16);
             this.lbl_course.TabIndex = 6;
-            this.lbl_course.Text = "Subject:";
+            this.lbl_course.Text = "Subject :";
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(397, 141);
+            this.btn_delete.Location = new System.Drawing.Point(430, 209);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(100, 23);
             this.btn_delete.TabIndex = 7;
@@ -118,19 +121,30 @@
             // 
             // btn_del_all
             // 
-            this.btn_del_all.Location = new System.Drawing.Point(538, 141);
+            this.btn_del_all.Location = new System.Drawing.Point(589, 209);
             this.btn_del_all.Name = "btn_del_all";
-            this.btn_del_all.Size = new System.Drawing.Size(86, 23);
+            this.btn_del_all.Size = new System.Drawing.Size(100, 23);
             this.btn_del_all.TabIndex = 8;
             this.btn_del_all.Text = "DELETE ALL";
             this.btn_del_all.UseVisualStyleBackColor = true;
             this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(137, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 24);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Exam Details...";
+            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 408);
+            this.ClientSize = new System.Drawing.Size(821, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.lbl_course);
@@ -161,5 +175,6 @@
         private System.Windows.Forms.Label lbl_course;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_del_all;
+        private System.Windows.Forms.Label label1;
     }
 }

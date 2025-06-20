@@ -37,12 +37,13 @@
             this.cmb_course = new System.Windows.Forms.ComboBox();
             this.dgv_stu = new System.Windows.Forms.DataGridView();
             this.btn_del_all = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(37, 189);
+            this.btnadd.Location = new System.Drawing.Point(59, 211);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(110, 23);
             this.btnadd.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Location = new System.Drawing.Point(207, 189);
+            this.btnupdate.Location = new System.Drawing.Point(220, 211);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(129, 23);
             this.btnupdate.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(393, 189);
+            this.btndelete.Location = new System.Drawing.Point(402, 211);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(129, 23);
             this.btndelete.TabIndex = 2;
@@ -73,7 +74,7 @@
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(91, 76);
+            this.lblname.Location = new System.Drawing.Point(193, 97);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(78, 13);
             this.lblname.TabIndex = 3;
@@ -82,7 +83,7 @@
             // lbl_course
             // 
             this.lbl_course.AutoSize = true;
-            this.lbl_course.Location = new System.Drawing.Point(91, 136);
+            this.lbl_course.Location = new System.Drawing.Point(193, 154);
             this.lbl_course.Name = "lbl_course";
             this.lbl_course.Size = new System.Drawing.Size(43, 13);
             this.lbl_course.TabIndex = 5;
@@ -90,9 +91,9 @@
             // 
             // txtBox_name
             // 
-            this.txtBox_name.Location = new System.Drawing.Point(210, 73);
+            this.txtBox_name.Location = new System.Drawing.Point(293, 94);
             this.txtBox_name.Name = "txtBox_name";
-            this.txtBox_name.Size = new System.Drawing.Size(256, 20);
+            this.txtBox_name.Size = new System.Drawing.Size(259, 20);
             this.txtBox_name.TabIndex = 6;
             // 
             // cmb_course
@@ -101,7 +102,7 @@
             this.cmb_course.Items.AddRange(new object[] {
             "ICT",
             "English"});
-            this.cmb_course.Location = new System.Drawing.Point(207, 133);
+            this.cmb_course.Location = new System.Drawing.Point(293, 151);
             this.cmb_course.Name = "cmb_course";
             this.cmb_course.Size = new System.Drawing.Size(259, 21);
             this.cmb_course.TabIndex = 8;
@@ -109,7 +110,7 @@
             // dgv_stu
             // 
             this.dgv_stu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_stu.Location = new System.Drawing.Point(94, 232);
+            this.dgv_stu.Location = new System.Drawing.Point(134, 271);
             this.dgv_stu.Name = "dgv_stu";
             this.dgv_stu.Size = new System.Drawing.Size(450, 203);
             this.dgv_stu.TabIndex = 9;
@@ -117,19 +118,30 @@
             // 
             // btn_del_all
             // 
-            this.btn_del_all.Location = new System.Drawing.Point(560, 189);
+            this.btn_del_all.Location = new System.Drawing.Point(587, 211);
             this.btn_del_all.Name = "btn_del_all";
-            this.btn_del_all.Size = new System.Drawing.Size(89, 23);
+            this.btn_del_all.Size = new System.Drawing.Size(129, 23);
             this.btn_del_all.TabIndex = 10;
             this.btn_del_all.Text = "DELETE ALL";
             this.btn_del_all.UseVisualStyleBackColor = true;
             this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(90, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 24);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Students Details...";
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 447);
+            this.ClientSize = new System.Drawing.Size(821, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_stu);
             this.Controls.Add(this.cmb_course);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.ComboBox cmb_course;
         private System.Windows.Forms.DataGridView dgv_stu;
         private System.Windows.Forms.Button btn_del_all;
+        private System.Windows.Forms.Label label1;
     }
 }

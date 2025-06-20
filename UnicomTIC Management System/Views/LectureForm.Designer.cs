@@ -36,13 +36,14 @@
             this.txt_lec_name = new System.Windows.Forms.TextBox();
             this.txt_lec_add = new System.Windows.Forms.TextBox();
             this.dgv_lecture = new System.Windows.Forms.DataGridView();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lecture)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_lename
             // 
             this.lbl_lename.AutoSize = true;
-            this.lbl_lename.Location = new System.Drawing.Point(68, 77);
+            this.lbl_lename.Location = new System.Drawing.Point(102, 80);
             this.lbl_lename.Name = "lbl_lename";
             this.lbl_lename.Size = new System.Drawing.Size(38, 13);
             this.lbl_lename.TabIndex = 0;
@@ -51,7 +52,7 @@
             // lbl_lec_add
             // 
             this.lbl_lec_add.AutoSize = true;
-            this.lbl_lec_add.Location = new System.Drawing.Point(68, 127);
+            this.lbl_lec_add.Location = new System.Drawing.Point(95, 127);
             this.lbl_lec_add.Name = "lbl_lec_add";
             this.lbl_lec_add.Size = new System.Drawing.Size(45, 13);
             this.lbl_lec_add.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // btn_lec_add
             // 
-            this.btn_lec_add.Location = new System.Drawing.Point(71, 181);
+            this.btn_lec_add.Location = new System.Drawing.Point(133, 181);
             this.btn_lec_add.Name = "btn_lec_add";
             this.btn_lec_add.Size = new System.Drawing.Size(75, 23);
             this.btn_lec_add.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // btn_lec_update
             // 
-            this.btn_lec_update.Location = new System.Drawing.Point(165, 181);
+            this.btn_lec_update.Location = new System.Drawing.Point(246, 181);
             this.btn_lec_update.Name = "btn_lec_update";
             this.btn_lec_update.Size = new System.Drawing.Size(75, 23);
             this.btn_lec_update.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             // btn_lec_delete
             // 
-            this.btn_lec_delete.Location = new System.Drawing.Point(260, 181);
+            this.btn_lec_delete.Location = new System.Drawing.Point(368, 181);
             this.btn_lec_delete.Name = "btn_lec_delete";
             this.btn_lec_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_lec_delete.TabIndex = 4;
@@ -89,14 +90,14 @@
             // 
             // txt_lec_name
             // 
-            this.txt_lec_name.Location = new System.Drawing.Point(147, 77);
+            this.txt_lec_name.Location = new System.Drawing.Point(208, 77);
             this.txt_lec_name.Name = "txt_lec_name";
             this.txt_lec_name.Size = new System.Drawing.Size(174, 20);
             this.txt_lec_name.TabIndex = 5;
             // 
             // txt_lec_add
             // 
-            this.txt_lec_add.Location = new System.Drawing.Point(147, 124);
+            this.txt_lec_add.Location = new System.Drawing.Point(208, 127);
             this.txt_lec_add.Name = "txt_lec_add";
             this.txt_lec_add.Size = new System.Drawing.Size(174, 20);
             this.txt_lec_add.TabIndex = 6;
@@ -104,17 +105,28 @@
             // dgv_lecture
             // 
             this.dgv_lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_lecture.Location = new System.Drawing.Point(71, 223);
+            this.dgv_lecture.Location = new System.Drawing.Point(174, 235);
             this.dgv_lecture.Name = "dgv_lecture";
             this.dgv_lecture.Size = new System.Drawing.Size(314, 200);
             this.dgv_lecture.TabIndex = 7;
             this.dgv_lecture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_lecture_CellContentClick_1);
+            // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(486, 181);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(75, 23);
+            this.btn_del_all.TabIndex = 8;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
             // 
             // LectureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 447);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_lecture);
             this.Controls.Add(this.txt_lec_add);
             this.Controls.Add(this.txt_lec_name);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.TextBox txt_lec_name;
         private System.Windows.Forms.TextBox txt_lec_add;
         private System.Windows.Forms.DataGridView dgv_lecture;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

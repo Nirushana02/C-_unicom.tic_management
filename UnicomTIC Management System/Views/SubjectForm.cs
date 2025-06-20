@@ -103,5 +103,20 @@ namespace UnicomTIC_Management_System.Views
                 cmb_course.SelectedValue = row.Cells["CourseID"].Value;
             }
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {                     
+            var confirmation = MessageBox.Show("Are you sure you want to delete all subject and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await subject_Controller.ResetSubjectDataAsync(); // Resetting IDs
+                txt_sub.Clear();
+                Clicked_SubjectId = -1;
+                await LoadSubjects();
+                MessageBox.Show("All subject deleted, and IDs reset.");
+            }
+        }
     }
+    
 }

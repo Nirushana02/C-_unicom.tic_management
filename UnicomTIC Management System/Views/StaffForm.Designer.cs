@@ -40,6 +40,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.dgv_staff = new System.Windows.Forms.DataGridView();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_staff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +128,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(280, 167);
+            this.btn_update.Location = new System.Drawing.Point(240, 167);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 9;
@@ -137,7 +138,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(475, 167);
+            this.btn_delete.Location = new System.Drawing.Point(378, 167);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 10;
@@ -154,11 +155,22 @@
             this.dgv_staff.TabIndex = 11;
             this.dgv_staff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(495, 166);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(93, 23);
+            this.btn_del_all.TabIndex = 12;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 408);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.dgv_staff);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
@@ -195,5 +207,6 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dgv_staff;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

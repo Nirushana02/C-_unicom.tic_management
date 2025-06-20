@@ -71,6 +71,12 @@ namespace UnicomTIC_Management_System.Views
                 txt_cname.Clear();
                 Clicked_Id = -1;
                 await LoadCourses();
+
+                MessageBox.Show("Course updated Successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Upadate Fail");
             }
         }
 
@@ -82,6 +88,13 @@ namespace UnicomTIC_Management_System.Views
                 txt_cname.Clear();
                 Clicked_Id = -1;
                 await LoadCourses();
+
+                MessageBox.Show("Course Deleted Sucessfully");
+            }
+
+            else
+            {
+                MessageBox.Show("Error in Delete");
             }
         }
 
@@ -92,6 +105,20 @@ namespace UnicomTIC_Management_System.Views
                 DataGridViewRow row = dgv_course.Rows[e.RowIndex];
                 Clicked_Id = Convert.ToInt32(row.Cells["CourseID"].Value);
                 txt_cname.Text = row.Cells["CourseName"].Value.ToString();
+            }
+        }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all courses and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await course_Controller.ResetCourseDataAsync(); // Resetting IDs
+                txt_cname.Clear();
+                Clicked_Id = -1;
+                await LoadCourses();
+                MessageBox.Show("All courses deleted, and IDs reset.");
             }
         }
     }

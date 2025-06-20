@@ -36,6 +36,7 @@
             this.txt_sub = new System.Windows.Forms.TextBox();
             this.lbl_sub = new System.Windows.Forms.Label();
             this.lbl_course = new System.Windows.Forms.Label();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,11 +115,22 @@
             this.lbl_course.TabIndex = 7;
             this.lbl_course.Text = "Course:";
             // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(537, 172);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(90, 23);
+            this.btn_del_all.TabIndex = 8;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
+            // 
             // SubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 447);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.lbl_course);
             this.Controls.Add(this.lbl_sub);
             this.Controls.Add(this.txt_sub);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.TextBox txt_sub;
         private System.Windows.Forms.Label lbl_sub;
         private System.Windows.Forms.Label lbl_course;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

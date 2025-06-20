@@ -81,6 +81,13 @@ namespace UnicomTIC_Management_System.Views
                 txt_exam.Clear();
                 Clicked_ExamId = -1;
                 await LoadExams();
+
+                MessageBox.Show("Exam updated Successfully!");
+            }
+
+            else
+            {
+                MessageBox.Show("Please select the exam name to update!");
             }
         }
 
@@ -103,6 +110,20 @@ namespace UnicomTIC_Management_System.Views
                 Clicked_ExamId = Convert.ToInt32(row.Cells["ExamID"].Value);
                 txt_exam.Text = row.Cells["ExamName"].Value.ToString();
                 cmb_sub.SelectedValue = row.Cells["SubjectID"].Value;
+            }
+        }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all exams and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await exam_Controller.ResetExamDataAsync(); // Resetting IDs
+                txt_exam.Clear();
+                Clicked_ExamId = -1;
+                await LoadExams();
+                MessageBox.Show("All exams deleted, and IDs reset.");
             }
         }
     }

@@ -110,5 +110,19 @@ namespace UnicomTIC_Management_System.Views
             combo_room.DisplayMember = "RoomName";
             combo_room.ValueMember = "RoomID";
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all timetables and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await timetable_Controller.ResetTimetableDataAsync(); // Resetting IDs
+                txt_time.Clear();
+                Clicked_Timetable_Id = -1;
+                await LoadTimetables();
+                MessageBox.Show("All timetables deleted, and IDs reset.");
+            }
+        }
     }
 }

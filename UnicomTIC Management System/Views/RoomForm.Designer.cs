@@ -36,6 +36,7 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_room)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(270, 131);
+            this.btn_update.Location = new System.Drawing.Point(254, 131);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 6;
@@ -103,7 +104,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(437, 131);
+            this.btn_delete.Location = new System.Drawing.Point(381, 131);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 7;
@@ -111,11 +112,22 @@
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(502, 131);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(86, 23);
+            this.btn_del_all.TabIndex = 8;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
+            // 
             // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 447);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_add);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

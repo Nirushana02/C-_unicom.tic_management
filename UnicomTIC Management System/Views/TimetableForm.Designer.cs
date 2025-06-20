@@ -38,6 +38,7 @@
             this.lbl_room = new System.Windows.Forms.Label();
             this.dgv_timetable = new System.Windows.Forms.DataGridView();
             this.txt_time = new System.Windows.Forms.TextBox();
+            this.btn_del_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_timetable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +135,22 @@
             this.txt_time.Size = new System.Drawing.Size(183, 20);
             this.txt_time.TabIndex = 9;
             // 
+            // btn_del_all
+            // 
+            this.btn_del_all.Location = new System.Drawing.Point(156, 282);
+            this.btn_del_all.Name = "btn_del_all";
+            this.btn_del_all.Size = new System.Drawing.Size(99, 23);
+            this.btn_del_all.TabIndex = 10;
+            this.btn_del_all.Text = "DELETE ALL";
+            this.btn_del_all.UseVisualStyleBackColor = true;
+            this.btn_del_all.Click += new System.EventHandler(this.btn_del_all_Click);
+            // 
             // TimetableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 447);
+            this.Controls.Add(this.btn_del_all);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.dgv_timetable);
             this.Controls.Add(this.lbl_room);
@@ -171,5 +183,6 @@
         private System.Windows.Forms.Label lbl_room;
         private System.Windows.Forms.DataGridView dgv_timetable;
         private System.Windows.Forms.TextBox txt_time;
+        private System.Windows.Forms.Button btn_del_all;
     }
 }

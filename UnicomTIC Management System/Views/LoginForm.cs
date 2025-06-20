@@ -73,7 +73,7 @@ namespace UnicomTIC_Management_System.Views
 
                 if ((selectedRole == "Admin" && username == "admin" && password == "admin123") ||
                     (selectedRole == "Staff" && username == "staff" && password == "staff123") ||
-                    (selectedRole == "Lecturer" && username == "lecturer" && password == "lecturer123"))
+                    (selectedRole == "Lecture" && username == "lecture" && password == "lecture123"))
                 {
                     this.Hide();
 
@@ -81,7 +81,7 @@ namespace UnicomTIC_Management_System.Views
                         new AdminDashBoardForm().ShowDialog();
                     else if (selectedRole == "Staff")
                         new StaffDashBoardForm().ShowDialog();
-                    else if (selectedRole == "Lecturer")
+                    else if (selectedRole == "Lecture")
                         new LectureDashBoardForm().ShowDialog();
                 }
                 else

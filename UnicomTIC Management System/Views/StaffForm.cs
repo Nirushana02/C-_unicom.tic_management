@@ -139,5 +139,19 @@ namespace UnicomTIC_Management_System.Views
                 txt_name.Text = row.Cells["StaffName"].Value.ToString();
             }
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all staff and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await staff_Controller.ResetStaffDataAsync(); // Resetting IDs
+                txt_name.Clear();
+                Clicked_ID = -1;
+                await LoadStaffs();
+                MessageBox.Show("All staff deleted, and IDs reset.");
+            }
+        }
     }
 }

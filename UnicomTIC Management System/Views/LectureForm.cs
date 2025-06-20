@@ -136,5 +136,19 @@ namespace UnicomTIC_Management_System.Views
         {
             await LoadLectures();
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all lectures and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await lecture_Controller.ResetLectureDataAsync(); // Resetting IDs
+                txt_lec_name.Clear();
+                Clicked_LectureId = -1;
+                await LoadLectures();
+                MessageBox.Show("All lectures deleted, and IDs reset.");
+            }
+        }
     }
 }

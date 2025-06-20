@@ -89,6 +89,20 @@ namespace UnicomTIC_Management_System.Views
         {
             dgv_room.DataSource = await room_Controller.GetAllAsync();
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all staff and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await room_Controller.ResetRoomDataAsync(); // Resetting IDs
+                txt_rname.Clear();
+                Clicked_RoomId = -1;
+                await LoadRoom();
+                MessageBox.Show("All staff deleted, and IDs reset.");
+            }
+        }
     }
 
 

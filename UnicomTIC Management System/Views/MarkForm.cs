@@ -111,5 +111,19 @@ namespace UnicomTIC_Management_System.Views
                 txt_score.Text = row.Cells["Score"].Value.ToString();
             }
         }
+
+        private async void btn_del_all_Click(object sender, EventArgs e)
+        {
+            var confirmation = MessageBox.Show("Are you sure you want to delete all marks and reset IDs?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes)
+            {
+                await mark_Controller.ResetMarkDataAsync(); // Resetting IDs
+                txt_score.Clear();
+                Clicked_MarkId = -1;
+                await LoadMarks();
+                MessageBox.Show("All marks deleted, and IDs reset.");
+            }
+        }
     }
 }

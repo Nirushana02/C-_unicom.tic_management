@@ -46,6 +46,8 @@ namespace UnicomTIC_Management_System.Views
         private async Task LoadMarks()
         {
             dgv_marks.DataSource = await mark_Controller.GetAllMarksAsync();
+
+
         }
 
         private async void btn_add_Click(object sender, EventArgs e)

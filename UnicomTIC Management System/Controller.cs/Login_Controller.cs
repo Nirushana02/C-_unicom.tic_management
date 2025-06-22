@@ -21,6 +21,7 @@ namespace UnicomTIC_Management_System.Controller.cs
         {
             using (var conn = DBConfig.GetConnection())
             {
+                //ait conn.OpenAsync();
                 var cmd = new SQLiteCommand("SELECT * FROM Student WHERE StudentName = @name AND StudentID = @id", conn);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@id", studentId);
@@ -29,20 +30,49 @@ namespace UnicomTIC_Management_System.Controller.cs
                 {
                     if (await reader.ReadAsync())
                     {
-                        return new User
+                        var user = new User
                         {
                             UserID = Convert.ToInt32(reader["StudentID"]),
-                            UserName = reader["StudentName"].ToString(),
+                            Name = reader["StudentName"].ToString(),
                             Password = reader["StudentID"].ToString(),
                             Role = "Student"
+                        };
+
+                        return user;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public async Task<User> ValidateUserAsync(string name, string password)
+        {
+            using (var conn = DBConfig.GetConnection())
+            {
+                var cmd = new SQLiteCommand("SELECT * FROM User WHERE Name = @name AND Password = @password", conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    if (await reader.ReadAsync())
+                    {
+                        return new User
+                        {
+                            UserID = Convert.ToInt32(reader["UserID"]),
+                            Name = reader["Name"].ToString(),
+                            Password = reader["Password"].ToString(),
+                            Role = reader["Role"].ToString()
                         };
                     }
                 }
             }
 
-
             return null;
         }
+
+       
     }
 }
 

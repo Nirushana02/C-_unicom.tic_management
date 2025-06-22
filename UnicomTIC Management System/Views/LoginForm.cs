@@ -97,6 +97,8 @@ namespace UnicomTIC_Management_System.Views
         {
             this.Close();
         }
+
+        
     }
     
 }

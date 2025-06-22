@@ -96,7 +96,7 @@
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(147, 386);
+            this.btn_login.Location = new System.Drawing.Point(169, 417);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(139, 26);
             this.btn_login.TabIndex = 6;
@@ -118,7 +118,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(362, 386);
+            this.btn_cancel.Location = new System.Drawing.Point(404, 417);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(157, 26);
             this.btn_cancel.TabIndex = 8;

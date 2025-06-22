@@ -33,5 +33,7 @@ namespace UnicomTIC_Management_System.DashBoardForm
             dvg_viewmarks.AllowUserToAddRows = false;
             dvg_viewmarks.AllowUserToDeleteRows = false;
         }
+
+
     }
 }
